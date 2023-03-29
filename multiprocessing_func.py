@@ -45,7 +45,7 @@ def run_scraping(airbnb_url_to_scrape) -> DataFrame:
 
     for nr_p in range(1, nr_pages):
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, XPATH_WAIT_TILL_ELEM_VISIBLE)))
-        temp_pd = handle_apartments_tabs(2, driver)
+        temp_pd = handle_apartments_tabs(nr_apartments + 1, driver)
         #temp_pd = handle_apartments_tabs(nr_apartments + 1, driver)
         scraped_apartments = pd.concat([scraped_apartments, temp_pd])
         driver.find_element(By.XPATH, XPATH_NEXT_PAGE).click()
