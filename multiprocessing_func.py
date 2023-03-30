@@ -1,5 +1,6 @@
 import time
 import pandas as pd
+from pandas import DataFrame
 import urllib.parse as urlparse
 from urllib.parse import parse_qs
 
@@ -7,111 +8,108 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from bs4 import BeautifulSoup
-from pandas import DataFrame
 
-def run_scraping(airbnb_url_to_scrape) -> DataFrame:
-    opts = Options()
-    #opts.add_argument("--window-size=1200,800")
-    opts.add_argument("--headless")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
-    driver.get(airbnb_url_to_scrape)
+# helper func to scrape comments
+def scrape_comments(driver):
+    comments = []
+    XPATH_COMMENTS_BTN = "//button[contains(@aria-label, 'Bewertungen anzeigen, Öffnet den Modaldialog.')]"
+    XPATH_COMMENTS_BTN_CLOSE = "//button[@aria-label='Schließen']"
+    XPATH_COMMENTS_CLASS = "span[class='ll4r2nl dir dir-ltr']"
+    XPATH_COMMENTS_ON_SITE = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[4]/div/div/div/div[2]/section/div[3]/div/div/*"
 
-    time.sleep(5)
-
-    # wait till cookie banner pops up
     try:
-        # close cookie banner
-        cookie = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html[@class='js-focus-visible']/body[@class='with-new-header']/div[5]/div/div/div/div[1]/div[3]/section/div[2]/div[2]/button"))) 
-        cookie.click()
+        WebDriverWait(driver, 4).until(EC.visibility_of_element_located(
+            (By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[4]/div/div/div/div[2]")))
     except:
-        pass
+        print("could not load comments title")
+        return comments
 
-    # get nr of pages with aparements
-    nr_pages = len(driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[3]/div/div/nav/div/*"))
-    # subtract forward backwards buttons
-    nr_pages = nr_pages - 2
-
-    nr_apartments = len(driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div"))
-
-    # limited entries for tests 
-    scraped_apartments = pd.DataFrame()
-    XPATH_NEXT_PAGE = "//a[@aria-label='Weiter']"
-    XPATH_WAIT_TILL_ELEM_VISIBLE = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div[1]"
-
-    for nr_p in range(1, nr_pages):
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, XPATH_WAIT_TILL_ELEM_VISIBLE)))
-        temp_pd = handle_apartments_tabs(nr_apartments + 1, driver)
-        #temp_pd = handle_apartments_tabs(nr_apartments + 1, driver)
-        scraped_apartments = pd.concat([scraped_apartments, temp_pd])
-        driver.find_element(By.XPATH, XPATH_NEXT_PAGE).click()
-    
-    # close all tabs and window
-    for handles in driver.window_handles:
-        parent = handles
-        driver.switch_to.window(parent)
-        driver.close()
-
-    return scraped_apartments
-
-# helper func to open each aparement in sepeerate tab
-def handle_apartments_tabs(nr_apartments, driver):
-    # Click on each apartment which is opened in seperate tab
-    apartments = pd.DataFrame()
-    for nr in range(1, nr_apartments):
-        xpath = f"/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div[{nr}]"
-        driver.find_element(By.XPATH, xpath).click()
-
-        try:
-            # switch tab
-            #get old tab
-            parent = driver.window_handles[0]
-            time.sleep(3)
-            #get new tab
-            chld = driver.window_handles[1]
-            #switch to new tab
-            driver.switch_to.window(chld)
-        except:
-            print("could not switch tab")
-            continue
-
-        if nr == 1:
-            # first time tap is opened selenium needs some time to get running properly...
-            time.sleep(3)
-            try:
-                # close translate banner
-                transl = WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[9]/section/div/div/div[2]/div/div[1]/button"))) 
-                transl.click()
-            except:
-                pass
-        
-        apartment_scraped = scrape_apartment(nr, driver)
-
-        if apartment_scraped == None:
-            close_tab(driver)
-            continue
-
-        apartments = pd.concat([apartments, pd.DataFrame(apartment_scraped)])
-        close_tab(driver)
-    
-    return apartments
-
-def close_tab(driver):
     try:
-        # close tab
-        parent = driver.window_handles[0]
-        chld = driver.window_handles[1]
-        driver.switch_to.window(chld)
-        driver.close()
-        time.sleep(0.5)
-        parent = driver.window_handles[0]
-        driver.switch_to.window(parent)
+        if driver.find_elements(By.XPATH, XPATH_COMMENTS_BTN):
+            driver.find_element(By.XPATH, XPATH_COMMENTS_BTN).click()
+            WebDriverWait(driver, 4).until(EC.visibility_of_element_located(
+                (By.XPATH, "//div[contains(@data-testid, 'pdp-reviews-modal-scrollable-panel')]")))
+            resu = driver.find_elements(By.CSS_SELECTOR, XPATH_COMMENTS_CLASS)
+            for comm in resu:
+                if comm.text:
+                    comments.append(comm.text)
+            driver.find_element(By.XPATH, XPATH_COMMENTS_BTN_CLOSE).click()
+
+        elif not driver.find_elements(By.XPATH, XPATH_COMMENTS_BTN) and len(driver.find_elements(By.XPATH, XPATH_COMMENTS_ON_SITE)) > 0:
+            comments_on_page = driver.find_elements(
+                By.XPATH, XPATH_COMMENTS_ON_SITE)
+            for comm_on in comments_on_page:
+                if comm_on.text:
+                    temp_comm_on = comm_on.text.split("\n", maxsplit=2)[2:]
+                    comments.append(temp_comm_on[0])
+
+        else:
+            return comments
+
     except:
-        print("could not close tab")
+        print("could not process comments")
+        return comments
+
+    return comments
+
+# helper func to scrape coordinates
+def scrape_coordinates(driver):
+    lat = 0.0
+    lng = 0.0
+
+    try:
+        element_to_be_present_co = WebDriverWait(driver, 4).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[5]/div/div/div/div[2]/section/div[1]/div/h2")))
+        driver.execute_script("arguments[0].scrollIntoView();", element_to_be_present_co)
+
+        time.sleep(1)
+
+        coordinates_elem = WebDriverWait(driver, 4).until(EC.visibility_of_element_located((By.XPATH, "//*[contains(@href, 'https://maps.google.com/maps?ll=')]")))
+        coordinates_href = coordinates_elem.get_attribute('href')
+
+        parsed_href = urlparse.urlparse(coordinates_href)
+        coordinates = parse_qs(parsed_href.query)['ll'][0].split(',')
+        lat = float(coordinates[0])
+        lng = float(coordinates[1])
+    except:
+        print("Could not process coordinates")
+
+    return lat, lng
+
+# helper func to scrape ameneties
+def scrape_ameneties(driver):
+
+    ameneties_list = []
+
+    try:
+        SHOW_AMENETIES_CLASS = "button[class='l1j9v1wn b65jmrv v7aged4 dir dir-ltr']"
+        driver.find_element(By.CSS_SELECTOR, SHOW_AMENETIES_CLASS).click()
+
+        element_present_ame = EC.presence_of_element_located(
+            (By.XPATH, "//div[@aria-label='Das bietet dir diese Unterkunft']"))
+        WebDriverWait(driver, 6).until(element_present_ame)
+
+        soup = BeautifulSoup(driver.page_source, features='html.parser')
+        ameneties = soup.find_all("div", {"class": "t1dx2edb dir dir-ltr"})
+
+        for a in ameneties:
+            if "</span>" not in a.decode_contents():
+                ameneties_list.append(a.decode_contents())
+
+    except:
+        print("Could not process ameneties")
+
+    try:
+        driver.find_element(
+            By.XPATH, "//button[@aria-label='Schließen']").click()
+    except:
+        print("Could not close ameneties window")
+
+    return ameneties_list
 
 # scrapping logic for detail page apartment
 def scrape_apartment(nr_of_flat, driver):
@@ -231,103 +229,94 @@ def scrape_apartment(nr_of_flat, driver):
     flat = {'name': [apartment_name], 'price': [apartment_price], 'price_reduced': [apartment_price_reduced], 'place': [apartment_place], 'guests': [guests], 'bedrooms': [bedrooms], 'beds': [beds], 'bathrooms': [bathrooms], 'lat': [lat], 'lng': [lng], 'nr_of_ratings': [nr_of_ratings], 'rating_overall': [rating], 'rating_valueformoney': [rating_valueformoney],
             'rating_location': [rating_location], 'rating_checkin': [rating_checkin], 'rating_communication': [rating_communication], 'rating_cleanliness': [rating_cleanliness], 'rating_data_accuracy': [rating_data_accuracy], 'comments': [comments], 'list_ameneties': [apartment_ameneties]}
 
-    #print(nr_of_flat, flat)
+    print(nr_of_flat, flat)
 
     return flat
 
-# helper func to scrape ameneties
-def scrape_ameneties(driver):
-
-    ameneties_list = []
-
+def close_tab(driver):
     try:
-        SHOW_AMENETIES_CLASS = "button[class='l1j9v1wn b65jmrv v7aged4 dir dir-ltr']"
-        driver.find_element(By.CSS_SELECTOR, SHOW_AMENETIES_CLASS).click()
-
-        time.sleep(1)
-
-        element_present_ame = EC.presence_of_element_located(
-            (By.XPATH, "/html/body/div[9]/section/div/div/div[2]/div/div[3]"))
-        WebDriverWait(driver, 5).until(element_present_ame)
-
-        soup = BeautifulSoup(driver.page_source, features='html.parser')
-        ameneties = soup.find_all("div", {"class": "t1dx2edb dir dir-ltr"})
-
-        for a in ameneties:
-            if "</span>" not in a.decode_contents():
-                ameneties_list.append(a.decode_contents())
-
+        if len(driver.window_handles) > 1:
+            driver.close()
+            driver.switch_to.window(driver.window_handles[0])
+            time.sleep(1)
     except:
-        print("Could not process ameneties")
+        print("could not close tab")
 
+# helper func to open each aparement in sepeerate tab
+def handle_apartments_tabs(nr_apartments, driver):
+    # Click on each apartment which is opened in seperate tab
+    apartments = pd.DataFrame()
+    for nr in range(1, nr_apartments):
+        xpath = f"/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div[{nr}]"
+        driver.find_element(By.XPATH, xpath).click()
+
+        try:
+            time.sleep(1)
+            # switch to new tab
+            driver.switch_to.window(driver.window_handles[-1])
+        except:
+            print("could not switch tab")
+            continue
+
+        try:
+            # close translate banner
+            transl = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(
+                (By.XPATH, "//button[@aria-label='Schließen']")))
+            transl.click()
+        except:
+            pass
+
+        apartment_scraped = scrape_apartment(nr, driver)
+
+        if apartment_scraped == None:
+            close_tab(driver)
+            continue
+
+        apartments = pd.concat([apartments, pd.DataFrame(apartment_scraped)])
+        close_tab(driver)
+
+    return apartments
+
+def run_scraping(airbnb_url_to_scrape) -> DataFrame:
+    opts = Options()
+    #opts.add_argument("--window-size=1200,800")
+    opts.add_argument("--headless")
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=opts)
+    driver.get(airbnb_url_to_scrape)
+
+    time.sleep(2)
+
+    # wait till cookie banner pops up
     try:
-        driver.find_element(
-            By.XPATH, "/html/body/div[9]/section/div/div/div[2]/div/div[1]/button").click()
+        # close cookie banner
+        cookie = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html[@class='js-focus-visible']/body[@class='with-new-header']/div[5]/div/div/div/div[1]/div[3]/section/div[2]/div[2]/button"))) 
+        cookie.click()
     except:
-        print("Could not close ameneties window")
+        pass
 
-    return ameneties_list
+    # get nr of pages with aparements
+    nav_buttons_pages = driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[3]/div/div/nav/div/*")
+    # get nr of pages
+    nr_pages = int(nav_buttons_pages[(len(nav_buttons_pages)-2)].text)
 
-# helper func to scrape coordinates
-def scrape_coordinates(driver):
-    lat = 0.0
-    lng = 0.0
+    # get entries of apparements on page
+    nr_apartments = len(driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div"))
 
-    try:
-        element_to_be_present_co = WebDriverWait(driver, 4).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[5]/div/div/div/div[2]/section/div[1]/div/h2")))
-        driver.execute_script("arguments[0].scrollIntoView();", element_to_be_present_co)
+    # limited entries for tests 
+    scraped_apartments = pd.DataFrame()
+    XPATH_NEXT_PAGE = "//a[@aria-label='Weiter']"
+    XPATH_WAIT_TILL_ELEM_VISIBLE = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div[1]"
 
-        time.sleep(1)
-
-        coordinates_elem = WebDriverWait(driver, 4).until(EC.visibility_of_element_located((By.XPATH, "//*[contains(@href, 'https://maps.google.com/maps?ll=')]")))
-        coordinates_href = coordinates_elem.get_attribute('href')
-
-        parsed_href = urlparse.urlparse(coordinates_href)
-        coordinates = parse_qs(parsed_href.query)['ll'][0].split(',')
-        lat = float(coordinates[0])
-        lng = float(coordinates[1])
-    except:
-        print("Could not process coordinates")
-
-    return lat, lng
-
-# helper func to scrape comments
-def scrape_comments(driver):
-    comments = []
-    XPATH_COMMENTS_BTN = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[4]/div/div/div/div[2]/section/div[4]/button"
-    XPATH_COMMENTS_BTN_CLOSE = "/html/body/div[9]/section/div/div/div[2]/div/div[1]/button"
-    XPATH_COMMENTS_CLASS = "span[class='ll4r2nl dir dir-ltr']"
-    XPATH_COMMENTS_ON_SITE = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[4]/div/div/div/div[2]/section/div[3]/div/div/*"
-
-    try:
-        WebDriverWait(driver, 4).until(EC.visibility_of_element_located(
-            (By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div[1]/main/div/div[1]/div[4]/div/div/div/div[2]")))
-    except:
-        print("could not load comments title")
-        return comments
-
-    try:
-        if driver.find_elements(By.XPATH, XPATH_COMMENTS_BTN):
-            driver.find_element(By.XPATH, XPATH_COMMENTS_BTN).click()
-            resu = driver.find_elements(By.CSS_SELECTOR, XPATH_COMMENTS_CLASS)
-            for comm in resu:
-                if comm.text:
-                    comments.append(comm.text)
-            driver.find_element(By.XPATH, XPATH_COMMENTS_BTN_CLOSE).click()
-
-        elif not driver.find_elements(By.XPATH, XPATH_COMMENTS_BTN) and len(driver.find_elements(By.XPATH, XPATH_COMMENTS_ON_SITE)) > 0:
-            comments_on_page = driver.find_elements(
-                By.XPATH, XPATH_COMMENTS_ON_SITE)
-            for comm_on in comments_on_page:
-                if comm_on.text:
-                    temp_comm_on = comm_on.text.split("\n", maxsplit=2)[2:]
-                    comments.append(temp_comm_on[0])
-
-        else:
-            return comments
+    for nr_p in range(1, nr_pages):
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, XPATH_WAIT_TILL_ELEM_VISIBLE)))
+        temp_pd = handle_apartments_tabs(nr_apartments + 1, driver)
+        scraped_apartments = pd.concat([scraped_apartments, temp_pd])
+        driver.find_element(By.XPATH, XPATH_NEXT_PAGE).click()
     
-    except:
-        print("could not process comments")
-        return comments
+    # close all tabs and window
+    for handles in driver.window_handles:
+        parent = handles
+        driver.switch_to.window(parent)
+        driver.close()
 
-    return comments
+    return scraped_apartments
