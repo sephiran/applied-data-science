@@ -229,7 +229,7 @@ def scrape_apartment(nr_of_flat, driver):
     flat = {'name': [apartment_name], 'price': [apartment_price], 'price_reduced': [apartment_price_reduced], 'place': [apartment_place], 'guests': [guests], 'bedrooms': [bedrooms], 'beds': [beds], 'bathrooms': [bathrooms], 'lat': [lat], 'lng': [lng], 'nr_of_ratings': [nr_of_ratings], 'rating_overall': [rating], 'rating_valueformoney': [rating_valueformoney],
             'rating_location': [rating_location], 'rating_checkin': [rating_checkin], 'rating_communication': [rating_communication], 'rating_cleanliness': [rating_cleanliness], 'rating_data_accuracy': [rating_data_accuracy], 'comments': [comments], 'list_ameneties': [apartment_ameneties]}
 
-    print(nr_of_flat, flat)
+    print(nr_of_flat)
 
     return flat
 
@@ -277,6 +277,7 @@ def handle_apartments_tabs(nr_apartments, driver):
 
     return apartments
 
+
 def run_scraping(airbnb_url_to_scrape) -> DataFrame:
     opts = Options()
     #opts.add_argument("--window-size=1200,800")
@@ -296,9 +297,12 @@ def run_scraping(airbnb_url_to_scrape) -> DataFrame:
 
     # get nr of pages with aparements
     nav_buttons_pages = driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[3]/div/div/nav/div/*")
-    # get nr of pages
-    nr_pages = int(nav_buttons_pages[(len(nav_buttons_pages)-2)].text)
-
+    try:
+        # get nr of pages
+        nr_pages = int(nav_buttons_pages[(len(nav_buttons_pages)-2)].text)
+    except:
+        nr_pages = 1
+    
     # get entries of apparements on page
     nr_apartments = len(driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div"))
 
