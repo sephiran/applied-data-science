@@ -1,475 +1,103 @@
-;RaumeinheitSort;Raumeinheit;GliederungSort;Gliederung;Zimmer;GemeinnuetzigSort;GemeinnuetzigLang;EinheitSort;EinheitLang;mean;Grundgesamtheit;Sample1;Sample2
-108;1;Ganze Stadt;0;Ganze Stadt;2;0;Alle Wohnungen;1;Wohnung;1584.0;46692;13545;1742
-109;1;Ganze Stadt;1;Neubau bis 2 Jahre;2;0;Alle Wohnungen;1;Wohnung;2011.0;1498;488;56
-110;1;Ganze Stadt;2;Neubezug bis 2 Jahre;2;0;Alle Wohnungen;1;Wohnung;1777.0;13182;3081;488
-111;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;2;0;Alle Wohnungen;1;Wohnung;1609.0;20055;5922;764
-112;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;2;0;Alle Wohnungen;1;Wohnung;1312.0;6782;2348;253
-113;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;2;0;Alle Wohnungen;1;Wohnung;1226.0;5175;1706;181
-114;1;Ganze Stadt;0;Ganze Stadt;3;0;Alle Wohnungen;1;Wohnung;1789.0;74180;23356;1908
-115;1;Ganze Stadt;1;Neubau bis 2 Jahre;3;0;Alle Wohnungen;1;Wohnung;2518.0;1662;493;38
-116;1;Ganze Stadt;2;Neubezug bis 2 Jahre;3;0;Alle Wohnungen;1;Wohnung;2020.0;16917;4325;434
-117;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;3;0;Alle Wohnungen;1;Wohnung;1895.0;31466;9742;798
-118;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;3;0;Alle Wohnungen;1;Wohnung;1535.0;12702;4652;352
-119;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;3;0;Alle Wohnungen;1;Wohnung;1336.0;11433;4144;286
-120;1;Ganze Stadt;0;Ganze Stadt;4;0;Alle Wohnungen;1;Wohnung;2185.0;40897;13851;1713
-121;1;Ganze Stadt;1;Neubau bis 2 Jahre;4;0;Alle Wohnungen;1;Wohnung;2814.0;1149;448;33
-122;1;Ganze Stadt;2;Neubezug bis 2 Jahre;4;0;Alle Wohnungen;1;Wohnung;2523.0;6985;1860;298
-123;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;4;0;Alle Wohnungen;1;Wohnung;2331.0;16982;5610;696
-124;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;4;0;Alle Wohnungen;1;Wohnung;1941.0;8605;3508;337
-125;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;4;0;Alle Wohnungen;1;Wohnung;1701.0;7176;2425;349
-126;1;Ganze Stadt;0;Ganze Stadt;2;1;Gemeinnützig;1;Wohnung;1055.0;11106;7184;492
-127;1;Ganze Stadt;1;Neubau bis 2 Jahre;2;1;Gemeinnützig;1;Wohnung;1343.0;420;280;20
-128;1;Ganze Stadt;2;Neubezug bis 2 Jahre;2;1;Gemeinnützig;1;Wohnung;1058.0;1924;1179;104
-129;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;2;1;Gemeinnützig;1;Wohnung;1092.0;4894;3135;208
-130;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;2;1;Gemeinnützig;1;Wohnung;993.0;2294;1554;107
-131;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;2;1;Gemeinnützig;1;Wohnung;949.0;1574;1036;53
-132;1;Ganze Stadt;0;Ganze Stadt;3;1;Gemeinnützig;1;Wohnung;1181.0;22955;14636;597
-133;1;Ganze Stadt;1;Neubau bis 2 Jahre;3;1;Gemeinnützig;1;Wohnung;1545.0;607;360;12
-134;1;Ganze Stadt;2;Neubezug bis 2 Jahre;3;1;Gemeinnützig;1;Wohnung;1173.0;3520;2211;74
-135;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;3;1;Gemeinnützig;1;Wohnung;1236.0;9305;5907;260
-136;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;3;1;Gemeinnützig;1;Wohnung;1150.0;4946;3249;151
-137;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;3;1;Gemeinnützig;1;Wohnung;1058.0;4577;2909;100
-138;1;Ganze Stadt;0;Ganze Stadt;4;1;Gemeinnützig;1;Wohnung;1517.0;14925;9288;606
-139;1;Ganze Stadt;1;Neubau bis 2 Jahre;4;1;Gemeinnützig;1;Wohnung;1808.0;532;304;12
-140;1;Ganze Stadt;2;Neubezug bis 2 Jahre;4;1;Gemeinnützig;1;Wohnung;1505.0;1567;944;47
-141;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;4;1;Gemeinnützig;1;Wohnung;1603.0;6042;3712;239
-142;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;4;1;Gemeinnützig;1;Wohnung;1494.0;3935;2610;149
-143;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;4;1;Gemeinnützig;1;Wohnung;1319.0;2849;1718;159
-144;1;Ganze Stadt;0;Ganze Stadt;2;2;Nicht gemeinnützig;1;Wohnung;1749.0;35586;6361;1250
-145;1;Ganze Stadt;1;Neubau bis 2 Jahre;2;2;Nicht gemeinnützig;1;Wohnung;2272.0;1078;208;36
-146;1;Ganze Stadt;2;Neubezug bis 2 Jahre;2;2;Nicht gemeinnützig;1;Wohnung;1900.0;11258;1902;384
-147;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;2;2;Nicht gemeinnützig;1;Wohnung;1776.0;15161;2787;556
-148;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;2;2;Nicht gemeinnützig;1;Wohnung;1475.0;4488;794;146
-149;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;2;2;Nicht gemeinnützig;1;Wohnung;1347.0;3601;670;128
-150;1;Ganze Stadt;0;Ganze Stadt;3;2;Nicht gemeinnützig;1;Wohnung;2062.0;51225;8720;1311
-151;1;Ganze Stadt;1;Neubau bis 2 Jahre;3;2;Nicht gemeinnützig;1;Wohnung;3078.0;1055;133;26
-152;1;Ganze Stadt;2;Neubezug bis 2 Jahre;3;2;Nicht gemeinnützig;1;Wohnung;2243.0;13397;2114;360
-153;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;3;2;Nicht gemeinnützig;1;Wohnung;2171.0;22161;3835;538
-154;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;3;2;Nicht gemeinnützig;1;Wohnung;1780.0;7756;1403;201
-155;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;3;2;Nicht gemeinnützig;1;Wohnung;1521.0;6856;1235;186
-156;1;Ganze Stadt;0;Ganze Stadt;4;2;Nicht gemeinnützig;1;Wohnung;2568.0;25972;4563;1107
-157;1;Ganze Stadt;1;Neubau bis 2 Jahre;4;2;Nicht gemeinnützig;1;Wohnung;3682.0;617;144;21
-158;1;Ganze Stadt;2;Neubezug bis 2 Jahre;4;2;Nicht gemeinnützig;1;Wohnung;2818.0;5418;916;251
-159;1;Ganze Stadt;3;Bestand Mietverträge 2–10 Jahre;4;2;Nicht gemeinnützig;1;Wohnung;2733.0;10940;1898;457
-160;1;Ganze Stadt;4;Bestand Mietverträge 11-20 Jahre;4;2;Nicht gemeinnützig;1;Wohnung;2319.0;4670;898;188
-161;1;Ganze Stadt;5;Bestand Mietverträge über 20 Jahre;4;2;Nicht gemeinnützig;1;Wohnung;1952.0;4327;707;190
-450;2;Stadtkreise;0;Ganze Stadt;2;0;Alle Wohnungen;1;Wohnung;1584.0;46692;13545;1742
-451;2;Stadtkreise;10;Kreis 1;2;0;Alle Wohnungen;1;Wohnung;1904.0;1076;385;106
-452;2;Stadtkreise;20;Kreis 2;2;0;Alle Wohnungen;1;Wohnung;1636.0;3720;995;156
-453;2;Stadtkreise;30;Kreis 3;2;0;Alle Wohnungen;1;Wohnung;1482.0;6353;1711;182
-454;2;Stadtkreise;40;Kreis 4;2;0;Alle Wohnungen;1;Wohnung;1603.0;4075;1367;217
-455;2;Stadtkreise;50;Kreis 5;2;0;Alle Wohnungen;1;Wohnung;1748.0;1695;626;96
-456;2;Stadtkreise;60;Kreis 6;2;0;Alle Wohnungen;1;Wohnung;1608.0;3254;678;107
-457;2;Stadtkreise;70;Kreis 7;2;0;Alle Wohnungen;1;Wohnung;1740.0;2953;584;194
-458;2;Stadtkreise;80;Kreis 8;2;0;Alle Wohnungen;1;Wohnung;2031.0;2311;568;113
-459;2;Stadtkreise;90;Kreis 9;2;0;Alle Wohnungen;1;Wohnung;1584.0;6972;1819;127
-460;2;Stadtkreise;100;Kreis 10;2;0;Alle Wohnungen;1;Wohnung;1517.0;4013;1231;122
-461;2;Stadtkreise;110;Kreis 11;2;0;Alle Wohnungen;1;Wohnung;1505.0;7202;2194;203
-462;2;Stadtkreise;120;Kreis 12;2;0;Alle Wohnungen;1;Wohnung;1263.0;3068;1387;119
-463;2;Stadtkreise;0;Ganze Stadt;3;0;Alle Wohnungen;1;Wohnung;1789.0;74180;23356;1908
-464;2;Stadtkreise;10;Kreis 1;3;0;Alle Wohnungen;1;Wohnung;2533.0;836;272;111
-465;2;Stadtkreise;20;Kreis 2;3;0;Alle Wohnungen;1;Wohnung;1992.0;5569;1695;165
-466;2;Stadtkreise;30;Kreis 3;3;0;Alle Wohnungen;1;Wohnung;1695.0;9951;2768;178
-467;2;Stadtkreise;40;Kreis 4;3;0;Alle Wohnungen;1;Wohnung;1771.0;6139;2146;172
-468;2;Stadtkreise;50;Kreis 5;3;0;Alle Wohnungen;1;Wohnung;1924.0;2821;1047;87
-469;2;Stadtkreise;60;Kreis 6;3;0;Alle Wohnungen;1;Wohnung;1816.0;5413;1585;132
-470;2;Stadtkreise;70;Kreis 7;3;0;Alle Wohnungen;1;Wohnung;2174.0;4845;912;227
-471;2;Stadtkreise;80;Kreis 8;3;0;Alle Wohnungen;1;Wohnung;2429.0;3026;711;128
-472;2;Stadtkreise;90;Kreis 9;3;0;Alle Wohnungen;1;Wohnung;1635.0;10682;3231;171
-473;2;Stadtkreise;100;Kreis 10;3;0;Alle Wohnungen;1;Wohnung;1748.0;7084;2356;126
-474;2;Stadtkreise;110;Kreis 11;3;0;Alle Wohnungen;1;Wohnung;1733.0;11949;4025;229
-475;2;Stadtkreise;120;Kreis 12;3;0;Alle Wohnungen;1;Wohnung;1381.0;5865;2608;182
-476;2;Stadtkreise;0;Ganze Stadt;4;0;Alle Wohnungen;1;Wohnung;2185.0;40897;13851;1713
-477;2;Stadtkreise;10;Kreis 1;4;0;Alle Wohnungen;1;Wohnung;2901.0;459;160;80
-478;2;Stadtkreise;20;Kreis 2;4;0;Alle Wohnungen;1;Wohnung;2371.0;3720;1230;166
-479;2;Stadtkreise;30;Kreis 3;4;0;Alle Wohnungen;1;Wohnung;2046.0;4186;1445;185
-480;2;Stadtkreise;40;Kreis 4;4;0;Alle Wohnungen;1;Wohnung;2169.0;2196;664;147
-481;2;Stadtkreise;50;Kreis 5;4;0;Alle Wohnungen;1;Wohnung;2291.0;1388;485;69
-482;2;Stadtkreise;60;Kreis 6;4;0;Alle Wohnungen;1;Wohnung;2357.0;3509;1024;134
-483;2;Stadtkreise;70;Kreis 7;4;0;Alle Wohnungen;1;Wohnung;2705.0;3762;609;202
-484;2;Stadtkreise;80;Kreis 8;4;0;Alle Wohnungen;1;Wohnung;2872.0;1637;400;104
-485;2;Stadtkreise;90;Kreis 9;4;0;Alle Wohnungen;1;Wohnung;2089.0;5327;1814;129
-486;2;Stadtkreise;100;Kreis 10;4;0;Alle Wohnungen;1;Wohnung;2167.0;3992;1373;125
-487;2;Stadtkreise;110;Kreis 11;4;0;Alle Wohnungen;1;Wohnung;1933.0;7510;3067;227
-488;2;Stadtkreise;120;Kreis 12;4;0;Alle Wohnungen;1;Wohnung;1637.0;3211;1580;145
-489;2;Stadtkreise;0;Ganze Stadt;2;1;Gemeinnützig;1;Wohnung;1055.0;11106;7184;492
-490;2;Stadtkreise;10;Kreis 1;2;1;Gemeinnützig;1;Wohnung;1133.0;302;298;0
-491;2;Stadtkreise;20;Kreis 2;2;1;Gemeinnützig;1;Wohnung;1072.0;971;535;52
-492;2;Stadtkreise;30;Kreis 3;2;1;Gemeinnützig;1;Wohnung;941.0;1432;853;58
-493;2;Stadtkreise;40;Kreis 4;2;1;Gemeinnützig;1;Wohnung;1108.0;1218;858;55
-494;2;Stadtkreise;50;Kreis 5;2;1;Gemeinnützig;1;Wohnung;926.0;340;263;18
-495;2;Stadtkreise;60;Kreis 6;2;1;Gemeinnützig;1;Wohnung;1132.0;676;329;31
-496;2;Stadtkreise;70;Kreis 7;2;1;Gemeinnützig;1;Wohnung;1229.0;302;190;48
-497;2;Stadtkreise;80;Kreis 8;2;1;Gemeinnützig;1;Wohnung;1189.0;98;88;0
-498;2;Stadtkreise;90;Kreis 9;2;1;Gemeinnützig;1;Wohnung;1094.0;1657;995;46
-499;2;Stadtkreise;100;Kreis 10;2;1;Gemeinnützig;1;Wohnung;1030.0;1215;804;50
-500;2;Stadtkreise;110;Kreis 11;2;1;Gemeinnützig;1;Wohnung;1071.0;1540;1010;80
-501;2;Stadtkreise;120;Kreis 12;2;1;Gemeinnützig;1;Wohnung;1000.0;1355;961;54
-502;2;Stadtkreise;0;Ganze Stadt;3;1;Gemeinnützig;1;Wohnung;1181.0;22955;14636;597
-503;2;Stadtkreise;10;Kreis 1;3;1;Gemeinnützig;1;Wohnung;1522.0;201;198;0
-504;2;Stadtkreise;20;Kreis 2;3;1;Gemeinnützig;1;Wohnung;1240.0;1736;874;61
-505;2;Stadtkreise;30;Kreis 3;3;1;Gemeinnützig;1;Wohnung;1088.0;3050;1846;64
-506;2;Stadtkreise;40;Kreis 4;3;1;Gemeinnützig;1;Wohnung;1156.0;2066;1513;50
-507;2;Stadtkreise;50;Kreis 5;3;1;Gemeinnützig;1;Wohnung;1041.0;917;631;20
-508;2;Stadtkreise;60;Kreis 6;3;1;Gemeinnützig;1;Wohnung;1126.0;1939;1142;43
-509;2;Stadtkreise;70;Kreis 7;3;1;Gemeinnützig;1;Wohnung;1428.0;516;292;67
-510;2;Stadtkreise;80;Kreis 8;3;1;Gemeinnützig;1;Wohnung;1289.0;253;237;0
-511;2;Stadtkreise;90;Kreis 9;3;1;Gemeinnützig;1;Wohnung;1161.0;4058;2219;74
-512;2;Stadtkreise;100;Kreis 10;3;1;Gemeinnützig;1;Wohnung;1219.0;2128;1435;40
-513;2;Stadtkreise;110;Kreis 11;3;1;Gemeinnützig;1;Wohnung;1285.0;3159;2223;90
-514;2;Stadtkreise;120;Kreis 12;3;1;Gemeinnützig;1;Wohnung;1149.0;2932;2026;88
-515;2;Stadtkreise;0;Ganze Stadt;4;1;Gemeinnützig;1;Wohnung;1517.0;14925;9288;606
-516;2;Stadtkreise;10;Kreis 1;4;1;Gemeinnützig;1;Wohnung;1750.0;136;133;0
-517;2;Stadtkreise;20;Kreis 2;4;1;Gemeinnützig;1;Wohnung;1542.0;1435;768;51
-518;2;Stadtkreise;30;Kreis 3;4;1;Gemeinnützig;1;Wohnung;1475.0;1886;1176;78
-519;2;Stadtkreise;40;Kreis 4;4;1;Gemeinnützig;1;Wohnung;1437.0;713;479;61
-520;2;Stadtkreise;50;Kreis 5;4;1;Gemeinnützig;1;Wohnung;1405.0;423;296;22
-521;2;Stadtkreise;60;Kreis 6;4;1;Gemeinnützig;1;Wohnung;1532.0;1156;713;37
-522;2;Stadtkreise;70;Kreis 7;4;1;Gemeinnützig;1;Wohnung;1692.0;421;235;64
-523;2;Stadtkreise;80;Kreis 8;4;1;Gemeinnützig;1;Wohnung;1515.0;244;234;0
-524;2;Stadtkreise;90;Kreis 9;4;1;Gemeinnützig;1;Wohnung;1557.0;2299;1223;62
-525;2;Stadtkreise;100;Kreis 10;4;1;Gemeinnützig;1;Wohnung;1564.0;1340;872;55
-526;2;Stadtkreise;110;Kreis 11;4;1;Gemeinnützig;1;Wohnung;1506.0;2768;1853;103
-527;2;Stadtkreise;120;Kreis 12;4;1;Gemeinnützig;1;Wohnung;1471.0;2104;1306;73
-528;2;Stadtkreise;0;Ganze Stadt;2;2;Nicht gemeinnützig;1;Wohnung;1749.0;35586;6361;1250
-529;2;Stadtkreise;10;Kreis 1;2;2;Nicht gemeinnützig;1;Wohnung;2204.0;774;87;106
-530;2;Stadtkreise;20;Kreis 2;2;2;Nicht gemeinnützig;1;Wohnung;1836.0;2749;460;104
-531;2;Stadtkreise;30;Kreis 3;2;2;Nicht gemeinnützig;1;Wohnung;1640.0;4921;858;124
-532;2;Stadtkreise;40;Kreis 4;2;2;Nicht gemeinnützig;1;Wohnung;1814.0;2857;509;162
-533;2;Stadtkreise;50;Kreis 5;2;2;Nicht gemeinnützig;1;Wohnung;1954.0;1355;363;78
-534;2;Stadtkreise;60;Kreis 6;2;2;Nicht gemeinnützig;1;Wohnung;1733.0;2578;349;76
-535;2;Stadtkreise;70;Kreis 7;2;2;Nicht gemeinnützig;1;Wohnung;1798.0;2651;394;146
-536;2;Stadtkreise;80;Kreis 8;2;2;Nicht gemeinnützig;1;Wohnung;2068.0;2213;480;113
-537;2;Stadtkreise;90;Kreis 9;2;2;Nicht gemeinnützig;1;Wohnung;1737.0;5315;824;81
-538;2;Stadtkreise;100;Kreis 10;2;2;Nicht gemeinnützig;1;Wohnung;1729.0;2798;427;72
-539;2;Stadtkreise;110;Kreis 11;2;2;Nicht gemeinnützig;1;Wohnung;1623.0;5662;1184;123
-540;2;Stadtkreise;120;Kreis 12;2;2;Nicht gemeinnützig;1;Wohnung;1471.0;1713;426;65
-541;2;Stadtkreise;0;Ganze Stadt;3;2;Nicht gemeinnützig;1;Wohnung;2062.0;51225;8720;1311
-542;2;Stadtkreise;10;Kreis 1;3;2;Nicht gemeinnützig;1;Wohnung;2853.0;635;74;111
-543;2;Stadtkreise;20;Kreis 2;3;2;Nicht gemeinnützig;1;Wohnung;2332.0;3833;821;104
-544;2;Stadtkreise;30;Kreis 3;3;2;Nicht gemeinnützig;1;Wohnung;1964.0;6901;922;114
-545;2;Stadtkreise;40;Kreis 4;3;2;Nicht gemeinnützig;1;Wohnung;2083.0;4073;633;122
-546;2;Stadtkreise;50;Kreis 5;3;2;Nicht gemeinnützig;1;Wohnung;2350.0;1904;416;67
-547;2;Stadtkreise;60;Kreis 6;3;2;Nicht gemeinnützig;1;Wohnung;2201.0;3474;443;89
-548;2;Stadtkreise;70;Kreis 7;3;2;Nicht gemeinnützig;1;Wohnung;2263.0;4329;620;160
-549;2;Stadtkreise;80;Kreis 8;3;2;Nicht gemeinnützig;1;Wohnung;2533.0;2773;474;128
-550;2;Stadtkreise;90;Kreis 9;3;2;Nicht gemeinnützig;1;Wohnung;1925.0;6624;1012;97
-551;2;Stadtkreise;100;Kreis 10;3;2;Nicht gemeinnützig;1;Wohnung;1975.0;4956;921;86
-552;2;Stadtkreise;110;Kreis 11;3;2;Nicht gemeinnützig;1;Wohnung;1894.0;8790;1802;139
-553;2;Stadtkreise;120;Kreis 12;3;2;Nicht gemeinnützig;1;Wohnung;1612.0;2933;582;94
-554;2;Stadtkreise;0;Ganze Stadt;4;2;Nicht gemeinnützig;1;Wohnung;2568.0;25972;4563;1107
-555;2;Stadtkreise;10;Kreis 1;4;2;Nicht gemeinnützig;1;Wohnung;3386.0;323;27;80
-556;2;Stadtkreise;20;Kreis 2;4;2;Nicht gemeinnützig;1;Wohnung;2892.0;2285;462;115
-557;2;Stadtkreise;30;Kreis 3;4;2;Nicht gemeinnützig;1;Wohnung;2514.0;2300;269;107
-558;2;Stadtkreise;40;Kreis 4;4;2;Nicht gemeinnützig;1;Wohnung;2521.0;1483;185;86
-559;2;Stadtkreise;50;Kreis 5;4;2;Nicht gemeinnützig;1;Wohnung;2679.0;965;189;47
-560;2;Stadtkreise;60;Kreis 6;4;2;Nicht gemeinnützig;1;Wohnung;2762.0;2353;311;97
-561;2;Stadtkreise;70;Kreis 7;4;2;Nicht gemeinnützig;1;Wohnung;2832.0;3341;374;138
-562;2;Stadtkreise;80;Kreis 8;4;2;Nicht gemeinnützig;1;Wohnung;3110.0;1393;166;104
-563;2;Stadtkreise;90;Kreis 9;4;2;Nicht gemeinnützig;1;Wohnung;2494.0;3028;591;67
-564;2;Stadtkreise;100;Kreis 10;4;2;Nicht gemeinnützig;1;Wohnung;2472.0;2652;501;70
-565;2;Stadtkreise;110;Kreis 11;4;2;Nicht gemeinnützig;1;Wohnung;2182.0;4742;1214;124
-566;2;Stadtkreise;120;Kreis 12;4;2;Nicht gemeinnützig;1;Wohnung;1955.0;1107;274;72
-1080;3;Quartiergruppen;0;Ganze Stadt;2;0;Alle Wohnungen;1;Wohnung;1584.0;46692;13545;1742
-1081;3;Quartiergruppen;10;Kreis 1;2;0;Alle Wohnungen;1;Wohnung;1904.0;1076;385;106
-1082;3;Quartiergruppen;20;Kreis 2;2;0;Alle Wohnungen;1;Wohnung;1636.0;3720;995;156
-1083;3;Quartiergruppen;34;Sihlfeld;2;0;Alle Wohnungen;1;Wohnung;1516.0;2978;618;85
-1084;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;2;0;Alle Wohnungen;1;Wohnung;1453.0;3375;1093;97
-1085;3;Quartiergruppen;44;Hard;2;0;Alle Wohnungen;1;Wohnung;1326.0;1742;754;89
-1086;3;Quartiergruppen;49;Werd und Langstrasse;2;0;Alle Wohnungen;1;Wohnung;1811.0;2333;613;128
-1087;3;Quartiergruppen;50;Kreis 5;2;0;Alle Wohnungen;1;Wohnung;1748.0;1695;626;96
-1088;3;Quartiergruppen;61;Unterstrass;2;0;Alle Wohnungen;1;Wohnung;1522.0;2327;569;53
-1089;3;Quartiergruppen;63;Oberstrass;2;0;Alle Wohnungen;1;Wohnung;1824.0;927;109;54
-1090;3;Quartiergruppen;78;Fluntern und Hottingen;2;0;Alle Wohnungen;1;Wohnung;1833.0;1555;291;96
-1091;3;Quartiergruppen;79;Hirslanden und Witikon;2;0;Alle Wohnungen;1;Wohnung;1636.0;1398;293;98
-1092;3;Quartiergruppen;80;Kreis 8;2;0;Alle Wohnungen;1;Wohnung;2031.0;2311;568;113
-1093;3;Quartiergruppen;91;Albisrieden;2;0;Alle Wohnungen;1;Wohnung;1573.0;2542;836;63
-1094;3;Quartiergruppen;92;Altstetten;2;0;Alle Wohnungen;1;Wohnung;1590.0;4430;983;64
-1095;3;Quartiergruppen;101;Höngg;2;0;Alle Wohnungen;1;Wohnung;1518.0;1975;666;52
-1096;3;Quartiergruppen;102;Wipkingen;2;0;Alle Wohnungen;1;Wohnung;1517.0;2038;565;70
-1097;3;Quartiergruppen;111;Affoltern;2;0;Alle Wohnungen;1;Wohnung;1348.0;2023;752;67
-1098;3;Quartiergruppen;115;Oerlikon;2;0;Alle Wohnungen;1;Wohnung;1667.0;2842;696;75
-1099;3;Quartiergruppen;119;Seebach;2;0;Alle Wohnungen;1;Wohnung;1445.0;2337;746;61
-1100;3;Quartiergruppen;123;Hirzenbach;2;0;Alle Wohnungen;1;Wohnung;1282.0;1214;666;37
-1101;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;2;0;Alle Wohnungen;1;Wohnung;1250.0;1854;721;82
-1102;3;Quartiergruppen;0;Ganze Stadt;3;0;Alle Wohnungen;1;Wohnung;1789.0;74180;23356;1908
-1103;3;Quartiergruppen;10;Kreis 1;3;0;Alle Wohnungen;1;Wohnung;2533.0;836;272;111
-1104;3;Quartiergruppen;20;Kreis 2;3;0;Alle Wohnungen;1;Wohnung;1992.0;5569;1695;165
-1105;3;Quartiergruppen;34;Sihlfeld;3;0;Alle Wohnungen;1;Wohnung;1660.0;5506;1204;76
-1106;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;3;0;Alle Wohnungen;1;Wohnung;1739.0;4445;1564;102
-1107;3;Quartiergruppen;44;Hard;3;0;Alle Wohnungen;1;Wohnung;1460.0;2897;1352;58
-1108;3;Quartiergruppen;49;Werd und Langstrasse;3;0;Alle Wohnungen;1;Wohnung;2049.0;3242;794;114
-1109;3;Quartiergruppen;50;Kreis 5;3;0;Alle Wohnungen;1;Wohnung;1924.0;2821;1047;87
-1110;3;Quartiergruppen;61;Unterstrass;3;0;Alle Wohnungen;1;Wohnung;1705.0;4213;1336;68
-1111;3;Quartiergruppen;63;Oberstrass;3;0;Alle Wohnungen;1;Wohnung;2203.0;1200;249;64
-1112;3;Quartiergruppen;78;Fluntern und Hottingen;3;0;Alle Wohnungen;1;Wohnung;2571.0;2071;381;121
-1113;3;Quartiergruppen;79;Hirslanden und Witikon;3;0;Alle Wohnungen;1;Wohnung;1877.0;2774;531;106
-1114;3;Quartiergruppen;80;Kreis 8;3;0;Alle Wohnungen;1;Wohnung;2429.0;3026;711;128
-1115;3;Quartiergruppen;91;Albisrieden;3;0;Alle Wohnungen;1;Wohnung;1617.0;4056;1393;75
-1116;3;Quartiergruppen;92;Altstetten;3;0;Alle Wohnungen;1;Wohnung;1646.0;6626;1838;96
-1117;3;Quartiergruppen;101;Höngg;3;0;Alle Wohnungen;1;Wohnung;1830.0;3684;1384;60
-1118;3;Quartiergruppen;102;Wipkingen;3;0;Alle Wohnungen;1;Wohnung;1659.0;3400;972;66
-1119;3;Quartiergruppen;111;Affoltern;3;0;Alle Wohnungen;1;Wohnung;1590.0;3906;1685;84
-1120;3;Quartiergruppen;115;Oerlikon;3;0;Alle Wohnungen;1;Wohnung;1904.0;3976;977;68
-1121;3;Quartiergruppen;119;Seebach;3;0;Alle Wohnungen;1;Wohnung;1702.0;4067;1363;77
-1122;3;Quartiergruppen;123;Hirzenbach;3;0;Alle Wohnungen;1;Wohnung;1369.0;2414;1265;51
-1123;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;3;0;Alle Wohnungen;1;Wohnung;1388.0;3451;1343;131
-1124;3;Quartiergruppen;0;Ganze Stadt;4;0;Alle Wohnungen;1;Wohnung;2185.0;40897;13851;1713
-1125;3;Quartiergruppen;10;Kreis 1;4;0;Alle Wohnungen;1;Wohnung;2901.0;459;160;80
-1126;3;Quartiergruppen;20;Kreis 2;4;0;Alle Wohnungen;1;Wohnung;2371.0;3720;1230;166
-1127;3;Quartiergruppen;34;Sihlfeld;4;0;Alle Wohnungen;1;Wohnung;2051.0;1611;256;73
-1128;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;4;0;Alle Wohnungen;1;Wohnung;2043.0;2575;1189;112
-1129;3;Quartiergruppen;44;Hard;4;0;Alle Wohnungen;1;Wohnung;1741.0;890;470;49
-1130;3;Quartiergruppen;49;Werd und Langstrasse;4;0;Alle Wohnungen;1;Wohnung;2462.0;1306;194;98
-1131;3;Quartiergruppen;50;Kreis 5;4;0;Alle Wohnungen;1;Wohnung;2291.0;1388;485;69
-1132;3;Quartiergruppen;61;Unterstrass;4;0;Alle Wohnungen;1;Wohnung;2206.0;2442;823;74
-1133;3;Quartiergruppen;63;Oberstrass;4;0;Alle Wohnungen;1;Wohnung;2705.0;1067;201;60
-1134;3;Quartiergruppen;78;Fluntern und Hottingen;4;0;Alle Wohnungen;1;Wohnung;3001.0;1838;290;108
-1135;3;Quartiergruppen;79;Hirslanden und Witikon;4;0;Alle Wohnungen;1;Wohnung;2420.0;1924;319;94
-1136;3;Quartiergruppen;80;Kreis 8;4;0;Alle Wohnungen;1;Wohnung;2872.0;1637;400;104
-1137;3;Quartiergruppen;91;Albisrieden;4;0;Alle Wohnungen;1;Wohnung;2151.0;2273;841;67
-1138;3;Quartiergruppen;92;Altstetten;4;0;Alle Wohnungen;1;Wohnung;2045.0;3054;973;62
-1139;3;Quartiergruppen;101;Höngg;4;0;Alle Wohnungen;1;Wohnung;2213.0;2593;994;62
-1140;3;Quartiergruppen;102;Wipkingen;4;0;Alle Wohnungen;1;Wohnung;2082.0;1399;379;63
-1141;3;Quartiergruppen;111;Affoltern;4;0;Alle Wohnungen;1;Wohnung;1801.0;2934;1353;84
-1142;3;Quartiergruppen;115;Oerlikon;4;0;Alle Wohnungen;1;Wohnung;2070.0;2132;721;61
-1143;3;Quartiergruppen;119;Seebach;4;0;Alle Wohnungen;1;Wohnung;1971.0;2444;993;82
-1144;3;Quartiergruppen;123;Hirzenbach;4;0;Alle Wohnungen;1;Wohnung;1677.0;1236;678;57
-1145;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;4;0;Alle Wohnungen;1;Wohnung;1613.0;1975;902;88
-1146;3;Quartiergruppen;0;Ganze Stadt;2;1;Gemeinnützig;1;Wohnung;1055.0;11106;7184;492
-1147;3;Quartiergruppen;10;Kreis 1;2;1;Gemeinnützig;1;Wohnung;1133.0;302;298;0
-1148;3;Quartiergruppen;20;Kreis 2;2;1;Gemeinnützig;1;Wohnung;1072.0;971;535;52
-1149;3;Quartiergruppen;34;Sihlfeld;2;1;Gemeinnützig;1;Wohnung;998.0;656;245;27
-1150;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;2;1;Gemeinnützig;1;Wohnung;892.0;776;608;31
-1151;3;Quartiergruppen;44;Hard;2;1;Gemeinnützig;1;Wohnung;1029.0;901;631;23
-1152;3;Quartiergruppen;49;Werd und Langstrasse;2;1;Gemeinnützig;1;Wohnung;1332.0;317;227;32
-1153;3;Quartiergruppen;50;Kreis 5;2;1;Gemeinnützig;1;Wohnung;926.0;340;263;18
-1154;3;Quartiergruppen;61;Unterstrass;2;1;Gemeinnützig;1;Wohnung;1120.0;617;291;12
-1155;3;Quartiergruppen;63;Oberstrass;2;1;Gemeinnützig;1;Wohnung;1257.0;59;38;19
-1156;3;Quartiergruppen;78;Fluntern und Hottingen;2;1;Gemeinnützig;1;Wohnung;1350.0;170;137;18
-1157;3;Quartiergruppen;79;Hirslanden und Witikon;2;1;Gemeinnützig;1;Wohnung;1070.0;132;53;30
-1158;3;Quartiergruppen;80;Kreis 8;2;1;Gemeinnützig;1;Wohnung;1189.0;98;88;0
-1159;3;Quartiergruppen;91;Albisrieden;2;1;Gemeinnützig;1;Wohnung;1146.0;838;493;25
-1160;3;Quartiergruppen;92;Altstetten;2;1;Gemeinnützig;1;Wohnung;1041.0;819;502;21
-1161;3;Quartiergruppen;101;Höngg;2;1;Gemeinnützig;1;Wohnung;1054.0;516;378;18
-1162;3;Quartiergruppen;102;Wipkingen;2;1;Gemeinnützig;1;Wohnung;1012.0;699;426;32
-1163;3;Quartiergruppen;111;Affoltern;2;1;Gemeinnützig;1;Wohnung;1053.0;740;421;30
-1164;3;Quartiergruppen;115;Oerlikon;2;1;Gemeinnützig;1;Wohnung;1062.0;320;220;29
-1165;3;Quartiergruppen;119;Seebach;2;1;Gemeinnützig;1;Wohnung;1107.0;480;369;21
-1166;3;Quartiergruppen;123;Hirzenbach;2;1;Gemeinnützig;1;Wohnung;955.0;538;388;21
-1167;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;2;1;Gemeinnützig;1;Wohnung;1029.0;817;573;33
-1168;3;Quartiergruppen;0;Ganze Stadt;3;1;Gemeinnützig;1;Wohnung;1181.0;22955;14636;597
-1169;3;Quartiergruppen;10;Kreis 1;3;1;Gemeinnützig;1;Wohnung;1522.0;201;198;0
-1170;3;Quartiergruppen;20;Kreis 2;3;1;Gemeinnützig;1;Wohnung;1240.0;1736;874;61
-1171;3;Quartiergruppen;34;Sihlfeld;3;1;Gemeinnützig;1;Wohnung;1029.0;1726;834;31
-1172;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;3;1;Gemeinnützig;1;Wohnung;1166.0;1324;1012;33
-1173;3;Quartiergruppen;44;Hard;3;1;Gemeinnützig;1;Wohnung;1077.0;1558;1179;19
-1174;3;Quartiergruppen;49;Werd und Langstrasse;3;1;Gemeinnützig;1;Wohnung;1395.0;508;334;31
-1175;3;Quartiergruppen;50;Kreis 5;3;1;Gemeinnützig;1;Wohnung;1041.0;917;631;20
-1176;3;Quartiergruppen;61;Unterstrass;3;1;Gemeinnützig;1;Wohnung;1103.0;1705;957;23
-1177;3;Quartiergruppen;63;Oberstrass;3;1;Gemeinnützig;1;Wohnung;1294.0;234;185;20
-1178;3;Quartiergruppen;78;Fluntern und Hottingen;3;1;Gemeinnützig;1;Wohnung;1695.0;207;152;35
-1179;3;Quartiergruppen;79;Hirslanden und Witikon;3;1;Gemeinnützig;1;Wohnung;1250.0;309;140;32
-1180;3;Quartiergruppen;80;Kreis 8;3;1;Gemeinnützig;1;Wohnung;1289.0;253;237;0
-1181;3;Quartiergruppen;91;Albisrieden;3;1;Gemeinnützig;1;Wohnung;1139.0;1764;1010;40
-1182;3;Quartiergruppen;92;Altstetten;3;1;Gemeinnützig;1;Wohnung;1178.0;2294;1209;34
-1183;3;Quartiergruppen;101;Höngg;3;1;Gemeinnützig;1;Wohnung;1287.0;1012;776;17
-1184;3;Quartiergruppen;102;Wipkingen;3;1;Gemeinnützig;1;Wohnung;1156.0;1116;659;23
-1185;3;Quartiergruppen;111;Affoltern;3;1;Gemeinnützig;1;Wohnung;1348.0;1547;1049;47
-1186;3;Quartiergruppen;115;Oerlikon;3;1;Gemeinnützig;1;Wohnung;1264.0;558;414;20
-1187;3;Quartiergruppen;119;Seebach;3;1;Gemeinnützig;1;Wohnung;1203.0;1054;760;23
-1188;3;Quartiergruppen;123;Hirzenbach;3;1;Gemeinnützig;1;Wohnung;1131.0;1153;864;21
-1189;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;3;1;Gemeinnützig;1;Wohnung;1161.0;1779;1162;67
-1190;3;Quartiergruppen;0;Ganze Stadt;4;1;Gemeinnützig;1;Wohnung;1517.0;14925;9288;606
-1191;3;Quartiergruppen;10;Kreis 1;4;1;Gemeinnützig;1;Wohnung;1750.0;136;133;0
-1192;3;Quartiergruppen;20;Kreis 2;4;1;Gemeinnützig;1;Wohnung;1542.0;1435;768;51
-1193;3;Quartiergruppen;34;Sihlfeld;4;1;Gemeinnützig;1;Wohnung;1445.0;648;186;28
-1194;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;4;1;Gemeinnützig;1;Wohnung;1490.0;1238;990;50
-1195;3;Quartiergruppen;44;Hard;4;1;Gemeinnützig;1;Wohnung;1351.0;531;399;23
-1196;3;Quartiergruppen;49;Werd und Langstrasse;4;1;Gemeinnützig;1;Wohnung;1688.0;182;80;38
-1197;3;Quartiergruppen;50;Kreis 5;4;1;Gemeinnützig;1;Wohnung;1405.0;423;296;22
-1198;3;Quartiergruppen;61;Unterstrass;4;1;Gemeinnützig;1;Wohnung;1514.0;977;560;20
-1199;3;Quartiergruppen;63;Oberstrass;4;1;Gemeinnützig;1;Wohnung;1638.0;179;153;17
-1200;3;Quartiergruppen;78;Fluntern und Hottingen;4;1;Gemeinnützig;1;Wohnung;1939.0;174;133;29
-1201;3;Quartiergruppen;79;Hirslanden und Witikon;4;1;Gemeinnützig;1;Wohnung;1518.0;247;102;35
-1202;3;Quartiergruppen;80;Kreis 8;4;1;Gemeinnützig;1;Wohnung;1515.0;244;234;0
-1203;3;Quartiergruppen;91;Albisrieden;4;1;Gemeinnützig;1;Wohnung;1606.0;1006;527;34
-1204;3;Quartiergruppen;92;Altstetten;4;1;Gemeinnützig;1;Wohnung;1519.0;1293;696;28
-1205;3;Quartiergruppen;101;Höngg;4;1;Gemeinnützig;1;Wohnung;1621.0;817;610;24
-1206;3;Quartiergruppen;102;Wipkingen;4;1;Gemeinnützig;1;Wohnung;1475.0;523;262;31
-1207;3;Quartiergruppen;111;Affoltern;4;1;Gemeinnützig;1;Wohnung;1529.0;1452;923;52
-1208;3;Quartiergruppen;115;Oerlikon;4;1;Gemeinnützig;1;Wohnung;1488.0;463;335;15
-1209;3;Quartiergruppen;119;Seebach;4;1;Gemeinnützig;1;Wohnung;1474.0;853;595;36
-1210;3;Quartiergruppen;123;Hirzenbach;4;1;Gemeinnützig;1;Wohnung;1472.0;697;469;27
-1211;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;4;1;Gemeinnützig;1;Wohnung;1470.0;1407;837;46
-1212;3;Quartiergruppen;0;Ganze Stadt;2;2;Nicht gemeinnützig;1;Wohnung;1749.0;35586;6361;1250
-1213;3;Quartiergruppen;10;Kreis 1;2;2;Nicht gemeinnützig;1;Wohnung;2204.0;774;87;106
-1214;3;Quartiergruppen;20;Kreis 2;2;2;Nicht gemeinnützig;1;Wohnung;1836.0;2749;460;104
-1215;3;Quartiergruppen;34;Sihlfeld;2;2;Nicht gemeinnützig;1;Wohnung;1662.0;2322;373;58
-1216;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;2;2;Nicht gemeinnützig;1;Wohnung;1621.0;2599;485;66
-1217;3;Quartiergruppen;44;Hard;2;2;Nicht gemeinnützig;1;Wohnung;1644.0;841;123;66
-1218;3;Quartiergruppen;49;Werd und Langstrasse;2;2;Nicht gemeinnützig;1;Wohnung;1886.0;2016;386;96
-1219;3;Quartiergruppen;50;Kreis 5;2;2;Nicht gemeinnützig;1;Wohnung;1954.0;1355;363;78
-1220;3;Quartiergruppen;61;Unterstrass;2;2;Nicht gemeinnützig;1;Wohnung;1667.0;1710;278;41
-1221;3;Quartiergruppen;63;Oberstrass;2;2;Nicht gemeinnützig;1;Wohnung;1863.0;868;71;35
-1222;3;Quartiergruppen;78;Fluntern und Hottingen;2;2;Nicht gemeinnützig;1;Wohnung;1892.0;1385;154;78
-1223;3;Quartiergruppen;79;Hirslanden und Witikon;2;2;Nicht gemeinnützig;1;Wohnung;1695.0;1266;240;68
-1224;3;Quartiergruppen;80;Kreis 8;2;2;Nicht gemeinnützig;1;Wohnung;2068.0;2213;480;113
-1225;3;Quartiergruppen;91;Albisrieden;2;2;Nicht gemeinnützig;1;Wohnung;1783.0;1704;343;38
-1226;3;Quartiergruppen;92;Altstetten;2;2;Nicht gemeinnützig;1;Wohnung;1715.0;3611;481;43
-1227;3;Quartiergruppen;101;Höngg;2;2;Nicht gemeinnützig;1;Wohnung;1682.0;1459;288;34
-1228;3;Quartiergruppen;102;Wipkingen;2;2;Nicht gemeinnützig;1;Wohnung;1780.0;1339;139;38
-1229;3;Quartiergruppen;111;Affoltern;2;2;Nicht gemeinnützig;1;Wohnung;1518.0;1283;331;37
-1230;3;Quartiergruppen;115;Oerlikon;2;2;Nicht gemeinnützig;1;Wohnung;1744.0;2522;476;46
-1231;3;Quartiergruppen;119;Seebach;2;2;Nicht gemeinnützig;1;Wohnung;1532.0;1857;377;40
-1232;3;Quartiergruppen;123;Hirzenbach;2;2;Nicht gemeinnützig;1;Wohnung;1542.0;676;278;16
-1233;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;2;2;Nicht gemeinnützig;1;Wohnung;1424.0;1037;148;49
-1234;3;Quartiergruppen;0;Ganze Stadt;3;2;Nicht gemeinnützig;1;Wohnung;2062.0;51225;8720;1311
-1235;3;Quartiergruppen;10;Kreis 1;3;2;Nicht gemeinnützig;1;Wohnung;2853.0;635;74;111
-1236;3;Quartiergruppen;20;Kreis 2;3;2;Nicht gemeinnützig;1;Wohnung;2332.0;3833;821;104
-1237;3;Quartiergruppen;34;Sihlfeld;3;2;Nicht gemeinnützig;1;Wohnung;1948.0;3780;370;45
-1238;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;3;2;Nicht gemeinnützig;1;Wohnung;1983.0;3121;552;69
-1239;3;Quartiergruppen;44;Hard;3;2;Nicht gemeinnützig;1;Wohnung;1905.0;1339;173;39
-1240;3;Quartiergruppen;49;Werd und Langstrasse;3;2;Nicht gemeinnützig;1;Wohnung;2170.0;2734;460;83
-1241;3;Quartiergruppen;50;Kreis 5;3;2;Nicht gemeinnützig;1;Wohnung;2350.0;1904;416;67
-1242;3;Quartiergruppen;61;Unterstrass;3;2;Nicht gemeinnützig;1;Wohnung;2114.0;2508;379;45
-1243;3;Quartiergruppen;63;Oberstrass;3;2;Nicht gemeinnützig;1;Wohnung;2423.0;966;64;44
-1244;3;Quartiergruppen;78;Fluntern und Hottingen;3;2;Nicht gemeinnützig;1;Wohnung;2669.0;1864;229;86
-1245;3;Quartiergruppen;79;Hirslanden und Witikon;3;2;Nicht gemeinnützig;1;Wohnung;1956.0;2465;391;74
-1246;3;Quartiergruppen;80;Kreis 8;3;2;Nicht gemeinnützig;1;Wohnung;2533.0;2773;474;128
-1247;3;Quartiergruppen;91;Albisrieden;3;2;Nicht gemeinnützig;1;Wohnung;1985.0;2292;383;35
-1248;3;Quartiergruppen;92;Altstetten;3;2;Nicht gemeinnützig;1;Wohnung;1893.0;4332;629;62
-1249;3;Quartiergruppen;101;Höngg;3;2;Nicht gemeinnützig;1;Wohnung;2036.0;2672;608;43
-1250;3;Quartiergruppen;102;Wipkingen;3;2;Nicht gemeinnützig;1;Wohnung;1905.0;2284;313;43
-1251;3;Quartiergruppen;111;Affoltern;3;2;Nicht gemeinnützig;1;Wohnung;1749.0;2359;636;37
-1252;3;Quartiergruppen;115;Oerlikon;3;2;Nicht gemeinnützig;1;Wohnung;2009.0;3418;563;48
-1253;3;Quartiergruppen;119;Seebach;3;2;Nicht gemeinnützig;1;Wohnung;1877.0;3013;603;54
-1254;3;Quartiergruppen;123;Hirzenbach;3;2;Nicht gemeinnützig;1;Wohnung;1587.0;1261;401;30
-1255;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;3;2;Nicht gemeinnützig;1;Wohnung;1630.0;1672;181;64
-1256;3;Quartiergruppen;0;Ganze Stadt;4;2;Nicht gemeinnützig;1;Wohnung;2568.0;25972;4563;1107
-1257;3;Quartiergruppen;10;Kreis 1;4;2;Nicht gemeinnützig;1;Wohnung;3386.0;323;27;80
-1258;3;Quartiergruppen;20;Kreis 2;4;2;Nicht gemeinnützig;1;Wohnung;2892.0;2285;462;115
-1259;3;Quartiergruppen;34;Sihlfeld;4;2;Nicht gemeinnützig;1;Wohnung;2459.0;963;70;45
-1260;3;Quartiergruppen;39;Alt-Wiedikon und Friesenberg;4;2;Nicht gemeinnützig;1;Wohnung;2554.0;1337;199;62
-1261;3;Quartiergruppen;44;Hard;4;2;Nicht gemeinnützig;1;Wohnung;2317.0;359;71;26
-1262;3;Quartiergruppen;49;Werd und Langstrasse;4;2;Nicht gemeinnützig;1;Wohnung;2587.0;1124;114;60
-1263;3;Quartiergruppen;50;Kreis 5;4;2;Nicht gemeinnützig;1;Wohnung;2679.0;965;189;47
-1264;3;Quartiergruppen;61;Unterstrass;4;2;Nicht gemeinnützig;1;Wohnung;2667.0;1465;263;54
-1265;3;Quartiergruppen;63;Oberstrass;4;2;Nicht gemeinnützig;1;Wohnung;2920.0;888;48;43
-1266;3;Quartiergruppen;78;Fluntern und Hottingen;4;2;Nicht gemeinnützig;1;Wohnung;3112.0;1664;157;79
-1267;3;Quartiergruppen;79;Hirslanden und Witikon;4;2;Nicht gemeinnützig;1;Wohnung;2553.0;1677;217;59
-1268;3;Quartiergruppen;80;Kreis 8;4;2;Nicht gemeinnützig;1;Wohnung;3110.0;1393;166;104
-1269;3;Quartiergruppen;91;Albisrieden;4;2;Nicht gemeinnützig;1;Wohnung;2584.0;1267;314;33
-1270;3;Quartiergruppen;92;Altstetten;4;2;Nicht gemeinnützig;1;Wohnung;2432.0;1761;277;34
-1271;3;Quartiergruppen;101;Höngg;4;2;Nicht gemeinnützig;1;Wohnung;2485.0;1776;384;38
-1272;3;Quartiergruppen;102;Wipkingen;4;2;Nicht gemeinnützig;1;Wohnung;2445.0;876;117;32
-1273;3;Quartiergruppen;111;Affoltern;4;2;Nicht gemeinnützig;1;Wohnung;2067.0;1482;430;32
-1274;3;Quartiergruppen;115;Oerlikon;4;2;Nicht gemeinnützig;1;Wohnung;2232.0;1669;386;46
-1275;3;Quartiergruppen;119;Seebach;4;2;Nicht gemeinnützig;1;Wohnung;2237.0;1591;398;46
-1276;3;Quartiergruppen;123;Hirzenbach;4;2;Nicht gemeinnützig;1;Wohnung;1942.0;539;209;30
-1277;3;Quartiergruppen;129;Saatlen und Schwamendingen-Mitte;4;2;Nicht gemeinnützig;1;Wohnung;1967.0;568;65;42
-1686;4;Quartiere;0;Ganze Stadt;2;0;Alle Wohnungen;1;Wohnung;1584.0;46692;13545;1742
-1687;4;Quartiere;11;Rathaus;2;0;Alle Wohnungen;1;Wohnung;1840.0;704;264;42
-1688;4;Quartiere;12;Hochschulen;2;0;Alle Wohnungen;1;Wohnung;1962.0;53;18;17
-1689;4;Quartiere;13;Lindenhof;2;0;Alle Wohnungen;1;Wohnung;2035.0;259;83;28
-1690;4;Quartiere;14;City;2;0;Alle Wohnungen;1;Wohnung;2038.0;60;20;19
-1691;4;Quartiere;21;Wollishofen;2;0;Alle Wohnungen;1;Wohnung;1490.0;2193;585;74
-1692;4;Quartiere;23;Leimbach;2;0;Alle Wohnungen;1;Wohnung;1526.0;518;242;23
-1693;4;Quartiere;24;Enge;2;0;Alle Wohnungen;1;Wohnung;2009.0;1009;168;59
-1694;4;Quartiere;31;Alt-Wiedikon;2;0;Alle Wohnungen;1;Wohnung;1570.0;2558;549;76
-1695;4;Quartiere;33;Friesenberg;2;0;Alle Wohnungen;1;Wohnung;1089.0;817;544;21
-1696;4;Quartiere;34;Sihlfeld;2;0;Alle Wohnungen;1;Wohnung;1516.0;2978;618;85
-1697;4;Quartiere;41;Werd;2;0;Alle Wohnungen;1;Wohnung;1895.0;573;129;57
-1698;4;Quartiere;42;Langstrasse;2;0;Alle Wohnungen;1;Wohnung;1783.0;1760;484;71
-1699;4;Quartiere;44;Hard;2;0;Alle Wohnungen;1;Wohnung;1326.0;1742;754;89
-1700;4;Quartiere;51;Gewerbeschule;2;0;Alle Wohnungen;1;Wohnung;1623.0;1126;350;62
-1701;4;Quartiere;52;Escher Wyss;2;0;Alle Wohnungen;1;Wohnung;1993.0;569;276;34
-1702;4;Quartiere;61;Unterstrass;2;0;Alle Wohnungen;1;Wohnung;1522.0;2327;569;53
-1703;4;Quartiere;63;Oberstrass;2;0;Alle Wohnungen;1;Wohnung;1824.0;927;109;54
-1704;4;Quartiere;71;Fluntern;2;0;Alle Wohnungen;1;Wohnung;1934.0;568;108;38
-1705;4;Quartiere;72;Hottingen;2;0;Alle Wohnungen;1;Wohnung;1774.0;987;183;58
-1706;4;Quartiere;73;Hirslanden;2;0;Alle Wohnungen;1;Wohnung;1761.0;666;115;45
-1707;4;Quartiere;74;Witikon;2;0;Alle Wohnungen;1;Wohnung;1515.0;732;178;53
-1708;4;Quartiere;81;Seefeld;2;0;Alle Wohnungen;1;Wohnung;2128.0;957;211;43
-1709;4;Quartiere;82;Mühlebach;2;0;Alle Wohnungen;1;Wohnung;2060.0;876;283;38
-1710;4;Quartiere;83;Weinegg;2;0;Alle Wohnungen;1;Wohnung;1776.0;478;74;32
-1711;4;Quartiere;91;Albisrieden;2;0;Alle Wohnungen;1;Wohnung;1573.0;2542;836;63
-1712;4;Quartiere;92;Altstetten;2;0;Alle Wohnungen;1;Wohnung;1590.0;4430;983;64
-1713;4;Quartiere;101;Höngg;2;0;Alle Wohnungen;1;Wohnung;1518.0;1975;666;52
-1714;4;Quartiere;102;Wipkingen;2;0;Alle Wohnungen;1;Wohnung;1517.0;2038;565;70
-1715;4;Quartiere;111;Affoltern;2;0;Alle Wohnungen;1;Wohnung;1348.0;2023;752;67
-1716;4;Quartiere;115;Oerlikon;2;0;Alle Wohnungen;1;Wohnung;1667.0;2842;696;75
-1717;4;Quartiere;119;Seebach;2;0;Alle Wohnungen;1;Wohnung;1445.0;2337;746;61
-1718;4;Quartiere;121;Saatlen;2;0;Alle Wohnungen;1;Wohnung;1182.0;596;398;30
-1719;4;Quartiere;122;Schwamendingen-Mitte;2;0;Alle Wohnungen;1;Wohnung;1283.0;1258;323;52
-1720;4;Quartiere;123;Hirzenbach;2;0;Alle Wohnungen;1;Wohnung;1282.0;1214;666;37
-1721;4;Quartiere;0;Ganze Stadt;3;0;Alle Wohnungen;1;Wohnung;1789.0;74180;23356;1908
-1722;4;Quartiere;11;Rathaus;3;0;Alle Wohnungen;1;Wohnung;2391.0;490;169;40
-1723;4;Quartiere;12;Hochschulen;3;0;Alle Wohnungen;1;Wohnung;2612.0;50;18;22
-1724;4;Quartiere;13;Lindenhof;3;0;Alle Wohnungen;1;Wohnung;2974.0;181;54;31
-1725;4;Quartiere;14;City;3;0;Alle Wohnungen;1;Wohnung;2410.0;115;31;18
-1726;4;Quartiere;21;Wollishofen;3;0;Alle Wohnungen;1;Wohnung;1864.0;3345;1016;77
-1727;4;Quartiere;23;Leimbach;3;0;Alle Wohnungen;1;Wohnung;1668.0;712;367;26
-1728;4;Quartiere;24;Enge;3;0;Alle Wohnungen;1;Wohnung;2429.0;1512;312;62
-1729;4;Quartiere;31;Alt-Wiedikon;3;0;Alle Wohnungen;1;Wohnung;1898.0;3119;593;66
-1730;4;Quartiere;33;Friesenberg;3;0;Alle Wohnungen;1;Wohnung;1367.0;1326;971;36
-1731;4;Quartiere;34;Sihlfeld;3;0;Alle Wohnungen;1;Wohnung;1660.0;5506;1204;76
-1732;4;Quartiere;41;Werd;3;0;Alle Wohnungen;1;Wohnung;2179.0;840;188;53
-1733;4;Quartiere;42;Langstrasse;3;0;Alle Wohnungen;1;Wohnung;2003.0;2402;606;61
-1734;4;Quartiere;44;Hard;3;0;Alle Wohnungen;1;Wohnung;1460.0;2897;1352;58
-1735;4;Quartiere;51;Gewerbeschule;3;0;Alle Wohnungen;1;Wohnung;1652.0;1985;648;48
-1736;4;Quartiere;52;Escher Wyss;3;0;Alle Wohnungen;1;Wohnung;2572.0;836;399;39
-1737;4;Quartiere;61;Unterstrass;3;0;Alle Wohnungen;1;Wohnung;1705.0;4213;1336;68
-1738;4;Quartiere;63;Oberstrass;3;0;Alle Wohnungen;1;Wohnung;2203.0;1200;249;64
-1739;4;Quartiere;71;Fluntern;3;0;Alle Wohnungen;1;Wohnung;2879.0;770;182;45
-1740;4;Quartiere;72;Hottingen;3;0;Alle Wohnungen;1;Wohnung;2389.0;1301;199;76
-1741;4;Quartiere;73;Hirslanden;3;0;Alle Wohnungen;1;Wohnung;1933.0;1264;194;54
-1742;4;Quartiere;74;Witikon;3;0;Alle Wohnungen;1;Wohnung;1826.0;1510;337;52
-1743;4;Quartiere;81;Seefeld;3;0;Alle Wohnungen;1;Wohnung;2647.0;1167;268;45
-1744;4;Quartiere;82;Mühlebach;3;0;Alle Wohnungen;1;Wohnung;2436.0;1029;315;48
-1745;4;Quartiere;83;Weinegg;3;0;Alle Wohnungen;1;Wohnung;2109.0;830;128;35
-1746;4;Quartiere;91;Albisrieden;3;0;Alle Wohnungen;1;Wohnung;1617.0;4056;1393;75
-1747;4;Quartiere;92;Altstetten;3;0;Alle Wohnungen;1;Wohnung;1646.0;6626;1838;96
-1748;4;Quartiere;101;Höngg;3;0;Alle Wohnungen;1;Wohnung;1830.0;3684;1384;60
-1749;4;Quartiere;102;Wipkingen;3;0;Alle Wohnungen;1;Wohnung;1659.0;3400;972;66
-1750;4;Quartiere;111;Affoltern;3;0;Alle Wohnungen;1;Wohnung;1590.0;3906;1685;84
-1751;4;Quartiere;115;Oerlikon;3;0;Alle Wohnungen;1;Wohnung;1904.0;3976;977;68
-1752;4;Quartiere;119;Seebach;3;0;Alle Wohnungen;1;Wohnung;1702.0;4067;1363;77
-1753;4;Quartiere;121;Saatlen;3;0;Alle Wohnungen;1;Wohnung;1349.0;1111;637;47
-1754;4;Quartiere;122;Schwamendingen-Mitte;3;0;Alle Wohnungen;1;Wohnung;1407.0;2340;706;84
-1755;4;Quartiere;123;Hirzenbach;3;0;Alle Wohnungen;1;Wohnung;1369.0;2414;1265;51
-1756;4;Quartiere;0;Ganze Stadt;4;0;Alle Wohnungen;1;Wohnung;2185.0;40897;13851;1713
-1757;4;Quartiere;11;Rathaus;4;0;Alle Wohnungen;1;Wohnung;2953.0;221;70;30
-1758;4;Quartiere;12;Hochschulen;4;0;Alle Wohnungen;1;Wohnung;3406.0;54;18;15
-1759;4;Quartiere;13;Lindenhof;4;0;Alle Wohnungen;1;Wohnung;2877.0;104;29;20
-1760;4;Quartiere;14;City;4;0;Alle Wohnungen;1;Wohnung;2442.0;80;43;15
-1761;4;Quartiere;21;Wollishofen;4;0;Alle Wohnungen;1;Wohnung;2232.0;1977;599;71
-1762;4;Quartiere;23;Leimbach;4;0;Alle Wohnungen;1;Wohnung;1851.0;713;400;37
-1763;4;Quartiere;24;Enge;4;0;Alle Wohnungen;1;Wohnung;3000.0;1030;231;58
-1764;4;Quartiere;31;Alt-Wiedikon;4;0;Alle Wohnungen;1;Wohnung;2402.0;1289;276;55
-1765;4;Quartiere;33;Friesenberg;4;0;Alle Wohnungen;1;Wohnung;1681.0;1286;913;57
-1766;4;Quartiere;34;Sihlfeld;4;0;Alle Wohnungen;1;Wohnung;2051.0;1611;256;73
-1767;4;Quartiere;41;Werd;4;0;Alle Wohnungen;1;Wohnung;2596.0;448;70;50
-1768;4;Quartiere;42;Langstrasse;4;0;Alle Wohnungen;1;Wohnung;2392.0;858;124;48
-1769;4;Quartiere;44;Hard;4;0;Alle Wohnungen;1;Wohnung;1741.0;890;470;49
-1770;4;Quartiere;51;Gewerbeschule;4;0;Alle Wohnungen;1;Wohnung;1947.0;889;304;36
-1771;4;Quartiere;52;Escher Wyss;4;0;Alle Wohnungen;1;Wohnung;2902.0;499;181;33
-1772;4;Quartiere;61;Unterstrass;4;0;Alle Wohnungen;1;Wohnung;2206.0;2442;823;74
-1773;4;Quartiere;63;Oberstrass;4;0;Alle Wohnungen;1;Wohnung;2705.0;1067;201;60
-1774;4;Quartiere;71;Fluntern;4;0;Alle Wohnungen;1;Wohnung;3052.0;744;143;37
-1775;4;Quartiere;72;Hottingen;4;0;Alle Wohnungen;1;Wohnung;2964.0;1094;147;71
-1776;4;Quartiere;73;Hirslanden;4;0;Alle Wohnungen;1;Wohnung;2386.0;763;79;45
-1777;4;Quartiere;74;Witikon;4;0;Alle Wohnungen;1;Wohnung;2443.0;1161;240;49
-1778;4;Quartiere;81;Seefeld;4;0;Alle Wohnungen;1;Wohnung;3088.0;549;121;39
-1779;4;Quartiere;82;Mühlebach;4;0;Alle Wohnungen;1;Wohnung;3088.0;576;188;31
-1780;4;Quartiere;83;Weinegg;4;0;Alle Wohnungen;1;Wohnung;2399.0;512;91;34
-1781;4;Quartiere;91;Albisrieden;4;0;Alle Wohnungen;1;Wohnung;2151.0;2273;841;67
-1782;4;Quartiere;92;Altstetten;4;0;Alle Wohnungen;1;Wohnung;2045.0;3054;973;62
-1783;4;Quartiere;101;Höngg;4;0;Alle Wohnungen;1;Wohnung;2213.0;2593;994;62
-1784;4;Quartiere;102;Wipkingen;4;0;Alle Wohnungen;1;Wohnung;2082.0;1399;379;63
-1785;4;Quartiere;111;Affoltern;4;0;Alle Wohnungen;1;Wohnung;1801.0;2934;1353;84
-1786;4;Quartiere;115;Oerlikon;4;0;Alle Wohnungen;1;Wohnung;2070.0;2132;721;61
-1787;4;Quartiere;119;Seebach;4;0;Alle Wohnungen;1;Wohnung;1971.0;2444;993;82
-1788;4;Quartiere;121;Saatlen;4;0;Alle Wohnungen;1;Wohnung;1520.0;1161;654;34
-1789;4;Quartiere;122;Schwamendingen-Mitte;4;0;Alle Wohnungen;1;Wohnung;1745.0;814;248;54
-1790;4;Quartiere;123;Hirzenbach;4;0;Alle Wohnungen;1;Wohnung;1677.0;1236;678;57
+;Raumeinheit;GliederungSort;Gliederung;Zimmer;GemeinnuetzigSort;GemeinnuetzigLang;EinheitSort;EinheitLang;mean;Grundgesamtheit;Sample1;Sample2
+1687;Quartiere;11;Rathaus;2;0;Alle Wohnungen;1;Wohnung;1840.0;704;264;42
+1688;Quartiere;12;Hochschulen;2;0;Alle Wohnungen;1;Wohnung;1962.0;53;18;17
+1689;Quartiere;13;Lindenhof;2;0;Alle Wohnungen;1;Wohnung;2035.0;259;83;28
+1690;Quartiere;14;City;2;0;Alle Wohnungen;1;Wohnung;2038.0;60;20;19
+1691;Quartiere;21;Wollishofen;2;0;Alle Wohnungen;1;Wohnung;1490.0;2193;585;74
+1692;Quartiere;23;Leimbach;2;0;Alle Wohnungen;1;Wohnung;1526.0;518;242;23
+1693;Quartiere;24;Enge;2;0;Alle Wohnungen;1;Wohnung;2009.0;1009;168;59
+1694;Quartiere;31;Alt-Wiedikon;2;0;Alle Wohnungen;1;Wohnung;1570.0;2558;549;76
+1695;Quartiere;33;Friesenberg;2;0;Alle Wohnungen;1;Wohnung;1089.0;817;544;21
+1696;Quartiere;34;Sihlfeld;2;0;Alle Wohnungen;1;Wohnung;1516.0;2978;618;85
+1697;Quartiere;41;Werd;2;0;Alle Wohnungen;1;Wohnung;1895.0;573;129;57
+1698;Quartiere;42;Langstrasse;2;0;Alle Wohnungen;1;Wohnung;1783.0;1760;484;71
+1699;Quartiere;44;Hard;2;0;Alle Wohnungen;1;Wohnung;1326.0;1742;754;89
+1700;Quartiere;51;Gewerbeschule;2;0;Alle Wohnungen;1;Wohnung;1623.0;1126;350;62
+1701;Quartiere;52;Escher Wyss;2;0;Alle Wohnungen;1;Wohnung;1993.0;569;276;34
+1702;Quartiere;61;Unterstrass;2;0;Alle Wohnungen;1;Wohnung;1522.0;2327;569;53
+1703;Quartiere;63;Oberstrass;2;0;Alle Wohnungen;1;Wohnung;1824.0;927;109;54
+1704;Quartiere;71;Fluntern;2;0;Alle Wohnungen;1;Wohnung;1934.0;568;108;38
+1705;Quartiere;72;Hottingen;2;0;Alle Wohnungen;1;Wohnung;1774.0;987;183;58
+1706;Quartiere;73;Hirslanden;2;0;Alle Wohnungen;1;Wohnung;1761.0;666;115;45
+1707;Quartiere;74;Witikon;2;0;Alle Wohnungen;1;Wohnung;1515.0;732;178;53
+1708;Quartiere;81;Seefeld;2;0;Alle Wohnungen;1;Wohnung;2128.0;957;211;43
+1709;Quartiere;82;Mühlebach;2;0;Alle Wohnungen;1;Wohnung;2060.0;876;283;38
+1710;Quartiere;83;Weinegg;2;0;Alle Wohnungen;1;Wohnung;1776.0;478;74;32
+1711;Quartiere;91;Albisrieden;2;0;Alle Wohnungen;1;Wohnung;1573.0;2542;836;63
+1712;Quartiere;92;Altstetten;2;0;Alle Wohnungen;1;Wohnung;1590.0;4430;983;64
+1713;Quartiere;101;Höngg;2;0;Alle Wohnungen;1;Wohnung;1518.0;1975;666;52
+1714;Quartiere;102;Wipkingen;2;0;Alle Wohnungen;1;Wohnung;1517.0;2038;565;70
+1715;Quartiere;111;Affoltern;2;0;Alle Wohnungen;1;Wohnung;1348.0;2023;752;67
+1716;Quartiere;115;Oerlikon;2;0;Alle Wohnungen;1;Wohnung;1667.0;2842;696;75
+1717;Quartiere;119;Seebach;2;0;Alle Wohnungen;1;Wohnung;1445.0;2337;746;61
+1718;Quartiere;121;Saatlen;2;0;Alle Wohnungen;1;Wohnung;1182.0;596;398;30
+1719;Quartiere;122;Schwamendingen-Mitte;2;0;Alle Wohnungen;1;Wohnung;1283.0;1258;323;52
+1720;Quartiere;123;Hirzenbach;2;0;Alle Wohnungen;1;Wohnung;1282.0;1214;666;37
+1722;Quartiere;11;Rathaus;3;0;Alle Wohnungen;1;Wohnung;2391.0;490;169;40
+1723;Quartiere;12;Hochschulen;3;0;Alle Wohnungen;1;Wohnung;2612.0;50;18;22
+1724;Quartiere;13;Lindenhof;3;0;Alle Wohnungen;1;Wohnung;2974.0;181;54;31
+1725;Quartiere;14;City;3;0;Alle Wohnungen;1;Wohnung;2410.0;115;31;18
+1726;Quartiere;21;Wollishofen;3;0;Alle Wohnungen;1;Wohnung;1864.0;3345;1016;77
+1727;Quartiere;23;Leimbach;3;0;Alle Wohnungen;1;Wohnung;1668.0;712;367;26
+1728;Quartiere;24;Enge;3;0;Alle Wohnungen;1;Wohnung;2429.0;1512;312;62
+1729;Quartiere;31;Alt-Wiedikon;3;0;Alle Wohnungen;1;Wohnung;1898.0;3119;593;66
+1730;Quartiere;33;Friesenberg;3;0;Alle Wohnungen;1;Wohnung;1367.0;1326;971;36
+1731;Quartiere;34;Sihlfeld;3;0;Alle Wohnungen;1;Wohnung;1660.0;5506;1204;76
+1732;Quartiere;41;Werd;3;0;Alle Wohnungen;1;Wohnung;2179.0;840;188;53
+1733;Quartiere;42;Langstrasse;3;0;Alle Wohnungen;1;Wohnung;2003.0;2402;606;61
+1734;Quartiere;44;Hard;3;0;Alle Wohnungen;1;Wohnung;1460.0;2897;1352;58
+1735;Quartiere;51;Gewerbeschule;3;0;Alle Wohnungen;1;Wohnung;1652.0;1985;648;48
+1736;Quartiere;52;Escher Wyss;3;0;Alle Wohnungen;1;Wohnung;2572.0;836;399;39
+1737;Quartiere;61;Unterstrass;3;0;Alle Wohnungen;1;Wohnung;1705.0;4213;1336;68
+1738;Quartiere;63;Oberstrass;3;0;Alle Wohnungen;1;Wohnung;2203.0;1200;249;64
+1739;Quartiere;71;Fluntern;3;0;Alle Wohnungen;1;Wohnung;2879.0;770;182;45
+1740;Quartiere;72;Hottingen;3;0;Alle Wohnungen;1;Wohnung;2389.0;1301;199;76
+1741;Quartiere;73;Hirslanden;3;0;Alle Wohnungen;1;Wohnung;1933.0;1264;194;54
+1742;Quartiere;74;Witikon;3;0;Alle Wohnungen;1;Wohnung;1826.0;1510;337;52
+1743;Quartiere;81;Seefeld;3;0;Alle Wohnungen;1;Wohnung;2647.0;1167;268;45
+1744;Quartiere;82;Mühlebach;3;0;Alle Wohnungen;1;Wohnung;2436.0;1029;315;48
+1745;Quartiere;83;Weinegg;3;0;Alle Wohnungen;1;Wohnung;2109.0;830;128;35
+1746;Quartiere;91;Albisrieden;3;0;Alle Wohnungen;1;Wohnung;1617.0;4056;1393;75
+1747;Quartiere;92;Altstetten;3;0;Alle Wohnungen;1;Wohnung;1646.0;6626;1838;96
+1748;Quartiere;101;Höngg;3;0;Alle Wohnungen;1;Wohnung;1830.0;3684;1384;60
+1749;Quartiere;102;Wipkingen;3;0;Alle Wohnungen;1;Wohnung;1659.0;3400;972;66
+1750;Quartiere;111;Affoltern;3;0;Alle Wohnungen;1;Wohnung;1590.0;3906;1685;84
+1751;Quartiere;115;Oerlikon;3;0;Alle Wohnungen;1;Wohnung;1904.0;3976;977;68
+1752;Quartiere;119;Seebach;3;0;Alle Wohnungen;1;Wohnung;1702.0;4067;1363;77
+1753;Quartiere;121;Saatlen;3;0;Alle Wohnungen;1;Wohnung;1349.0;1111;637;47
+1754;Quartiere;122;Schwamendingen-Mitte;3;0;Alle Wohnungen;1;Wohnung;1407.0;2340;706;84
+1755;Quartiere;123;Hirzenbach;3;0;Alle Wohnungen;1;Wohnung;1369.0;2414;1265;51
+1757;Quartiere;11;Rathaus;4;0;Alle Wohnungen;1;Wohnung;2953.0;221;70;30
+1758;Quartiere;12;Hochschulen;4;0;Alle Wohnungen;1;Wohnung;3406.0;54;18;15
+1759;Quartiere;13;Lindenhof;4;0;Alle Wohnungen;1;Wohnung;2877.0;104;29;20
+1760;Quartiere;14;City;4;0;Alle Wohnungen;1;Wohnung;2442.0;80;43;15
+1761;Quartiere;21;Wollishofen;4;0;Alle Wohnungen;1;Wohnung;2232.0;1977;599;71
+1762;Quartiere;23;Leimbach;4;0;Alle Wohnungen;1;Wohnung;1851.0;713;400;37
+1763;Quartiere;24;Enge;4;0;Alle Wohnungen;1;Wohnung;3000.0;1030;231;58
+1764;Quartiere;31;Alt-Wiedikon;4;0;Alle Wohnungen;1;Wohnung;2402.0;1289;276;55
+1765;Quartiere;33;Friesenberg;4;0;Alle Wohnungen;1;Wohnung;1681.0;1286;913;57
+1766;Quartiere;34;Sihlfeld;4;0;Alle Wohnungen;1;Wohnung;2051.0;1611;256;73
+1767;Quartiere;41;Werd;4;0;Alle Wohnungen;1;Wohnung;2596.0;448;70;50
+1768;Quartiere;42;Langstrasse;4;0;Alle Wohnungen;1;Wohnung;2392.0;858;124;48
+1769;Quartiere;44;Hard;4;0;Alle Wohnungen;1;Wohnung;1741.0;890;470;49
+1770;Quartiere;51;Gewerbeschule;4;0;Alle Wohnungen;1;Wohnung;1947.0;889;304;36
+1771;Quartiere;52;Escher Wyss;4;0;Alle Wohnungen;1;Wohnung;2902.0;499;181;33
+1772;Quartiere;61;Unterstrass;4;0;Alle Wohnungen;1;Wohnung;2206.0;2442;823;74
+1773;Quartiere;63;Oberstrass;4;0;Alle Wohnungen;1;Wohnung;2705.0;1067;201;60
+1774;Quartiere;71;Fluntern;4;0;Alle Wohnungen;1;Wohnung;3052.0;744;143;37
+1775;Quartiere;72;Hottingen;4;0;Alle Wohnungen;1;Wohnung;2964.0;1094;147;71
+1776;Quartiere;73;Hirslanden;4;0;Alle Wohnungen;1;Wohnung;2386.0;763;79;45
+1777;Quartiere;74;Witikon;4;0;Alle Wohnungen;1;Wohnung;2443.0;1161;240;49
+1778;Quartiere;81;Seefeld;4;0;Alle Wohnungen;1;Wohnung;3088.0;549;121;39
+1779;Quartiere;82;Mühlebach;4;0;Alle Wohnungen;1;Wohnung;3088.0;576;188;31
+1780;Quartiere;83;Weinegg;4;0;Alle Wohnungen;1;Wohnung;2399.0;512;91;34
+1781;Quartiere;91;Albisrieden;4;0;Alle Wohnungen;1;Wohnung;2151.0;2273;841;67
+1782;Quartiere;92;Altstetten;4;0;Alle Wohnungen;1;Wohnung;2045.0;3054;973;62
+1783;Quartiere;101;Höngg;4;0;Alle Wohnungen;1;Wohnung;2213.0;2593;994;62
+1784;Quartiere;102;Wipkingen;4;0;Alle Wohnungen;1;Wohnung;2082.0;1399;379;63
+1785;Quartiere;111;Affoltern;4;0;Alle Wohnungen;1;Wohnung;1801.0;2934;1353;84
+1786;Quartiere;115;Oerlikon;4;0;Alle Wohnungen;1;Wohnung;2070.0;2132;721;61
+1787;Quartiere;119;Seebach;4;0;Alle Wohnungen;1;Wohnung;1971.0;2444;993;82
+1788;Quartiere;121;Saatlen;4;0;Alle Wohnungen;1;Wohnung;1520.0;1161;654;34
+1789;Quartiere;122;Schwamendingen-Mitte;4;0;Alle Wohnungen;1;Wohnung;1745.0;814;248;54
+1790;Quartiere;123;Hirzenbach;4;0;Alle Wohnungen;1;Wohnung;1677.0;1236;678;57
