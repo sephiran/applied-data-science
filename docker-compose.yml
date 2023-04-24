@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: adsproject_postgres
+    environment:
+      POSTGRES_DB: adsproject
+      POSTGRES_USER: ads
+      POSTGRES_PASSWORD: admin123!
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - my-network
+
+  python:
+    build: .
+    container_name: dbops
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["python", "database-operations/docker/dbops.py"]
+    networks:
+      - my-network
+
+volumes:
+  postgres_data:
+
+## Before running docker compose, create the network in bash with 'docker network create my-network'
+networks:
+  my-network:
+    external: true
