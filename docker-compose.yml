@@ -1,5 +1,19 @@
 version: "3.8"
 services:
+  jupyter:
+    image: jupyter/base-notebook:latest
+    build:
+      context: .
+      dockerfile: DockerfileJupyterNotebook
+    volumes:
+      - ./airbnb-scraping:/home/jovyan/airbnb-scraping
+      - ./database-operations:/home/jovyan/database-operations
+      - ./eda:/home/jovyan/eda
+      - ./nlp:/home/jovyan/nlp
+      - ./rental-prices:/home/jovyan/rental-prices
+      - ./data:/home/jovyan/data
+    ports:
+      - "8888:8888"
   postgres:
     image: postgres:latest
     container_name: adsproject_postgres
