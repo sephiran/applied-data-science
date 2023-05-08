@@ -17,7 +17,7 @@ table_name = 'airbnb'
 # Create a connection to the PostgreSQL database
 engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
 # Read csv into df
-df = pd.read_csv('/app/data/airbnb_rental_prices_combined.csv', sep=";")
+df = pd.read_csv('/home/jovyan/jupyter_data/data/airbnb_rental_prices_combined.csv', sep=";")
 # Save the DataFrame as a table in the PostgreSQL database
 df.to_sql(table_name, engine, if_exists='replace', index=False)
 
@@ -25,7 +25,7 @@ def read_table_to_dataframe(db_name, db_user, db_password, db_host, db_port, tab
     # Establish a connection to the PostgreSQL database
     conn = ps.connect(database=db_name, user=db_user, password=db_password, host=db_host, port=db_port)
     # Read the table from the PostgreSQL database into a DataFrame
-    df = pd.read_sql(f'SELECT * FROM {table_name};', conn)
+    df = pd.read_sql(f'SELECT * FROM {table_name};', conn) # type: ignore
     # Close the connection
     conn.close()
     return df

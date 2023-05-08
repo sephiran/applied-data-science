@@ -1,25 +1,20 @@
 version: "3.8"
 services:
   jupyter:
-    image: jupyter/base-notebook:latest
+    container_name: adsproject_jupyer
     build:
       context: .
-      dockerfile: DockerfileJupyterNotebook
+      dockerfile: DockerfileJupyterNotebook.dockerfile
     volumes:
-      - ./airbnb-scraping:/home/jovyan/airbnb-scraping
-      - ./database-operations:/home/jovyan/database-operations
-      - ./eda:/home/jovyan/eda
-      - ./nlp:/home/jovyan/nlp
-      - ./rental-prices:/home/jovyan/rental-prices
-      - ./data:/home/jovyan/data
+      - jupyter_data:/home/jovyan/jupyter_data
     ports:
       - "8888:8888"
+    networks:
+      - my-network
+  
   postgres:
     image: postgres:latest
     container_name: adsproject_postgres
-    build:
-      context: .
-      dockerfile: DockerfilePostgres
     environment:
       POSTGRES_DB: adsproject
       POSTGRES_USER: ads
@@ -28,26 +23,30 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    healthcheck:
+      test: pg_isready -U ads -h localhost -p 5432
+      interval: 15s
+      timeout: 2s
+      retries: 3
+      start_period: 1s
     restart: unless-stopped
     networks:
       - my-network
 
-  python:
-    build: .
-    container_name: dbops
+  db_ops:
+    container_name: ads_useless_container
     depends_on:
-      - postgres
-    volumes:
-      - .:/app
-    working_dir: /app
-    command: ["python", "database-operations/docker/dbops.py"]
+      postgres:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: DockerfileDBOps.dockerfile
     networks:
       - my-network
 
 volumes:
   postgres_data:
+  jupyter_data:
 
-## Before running docker compose, create the network in bash with 'docker network create my-network'
 networks:
   my-network:
-    external: true
