@@ -1,8 +1,0 @@
-# Dockerfile
-FROM python:3.9
-
-# install requirements
-COPY JupyterNotebookContainerRequirements.txt ./
-RUN pip install --no-cache-dir -r JupyterNotebookContainerRequirements.txt
-
-COPY . .
