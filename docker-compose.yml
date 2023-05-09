@@ -5,8 +5,6 @@ services:
     build:
       context: .
       dockerfile: DockerfileJupyterNotebook.dockerfile
-    volumes:
-      - jupyter_data:/home/jovyan/jupyter_data
     ports:
       - "8888:8888"
     networks:
@@ -56,7 +54,6 @@ services:
   
 volumes:
   postgres_data:
-  jupyter_data:
 
 networks:
   my-network:
