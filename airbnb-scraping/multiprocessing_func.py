@@ -296,7 +296,7 @@ def run_scraping(airbnb_url_to_scrape) -> DataFrame:
         pass
 
     # get nr of pages with aparements
-    nav_buttons_pages = driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[3]/div/div/nav/div/*")
+    nav_buttons_pages = driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div/div[3]/div/div/nav/div/*")
     try:
         # get nr of pages
         nr_pages = int(nav_buttons_pages[(len(nav_buttons_pages)-2)].text)
@@ -304,12 +304,12 @@ def run_scraping(airbnb_url_to_scrape) -> DataFrame:
         nr_pages = 1
     
     # get entries of apparements on page
-    nr_apartments = len(driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div"))
+    nr_apartments = len(driver.find_elements(By.XPATH, "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div/div[2]/div/div/div/div[1]/div"))
 
     # limited entries for tests 
     scraped_apartments = pd.DataFrame()
     XPATH_NEXT_PAGE = "//a[@aria-label='Weiter']"
-    XPATH_WAIT_TILL_ELEM_VISIBLE = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div[2]/div/div/div/div/div/div[1]"
+    XPATH_WAIT_TILL_ELEM_VISIBLE = "/html/body/div[5]/div/div/div[1]/div/div[2]/div/div/div/div/div/div[2]/main/div[2]/div/div[2]/div/div"
 
     for nr_p in range(1, nr_pages):
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, XPATH_WAIT_TILL_ELEM_VISIBLE)))
