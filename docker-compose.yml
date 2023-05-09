@@ -24,7 +24,7 @@ services:
     ports:
       - "5432:5432"
     healthcheck:
-      test: pg_isready -U ads -h localhost -p 5432
+      test: pg_isready -U check_connection -h localhost -p 5432
       interval: 15s
       timeout: 2s
       retries: 3
@@ -43,7 +43,16 @@ services:
       dockerfile: DockerfileDBOps.dockerfile
     networks:
       - my-network
-
+  
+  selenium:
+    container_name: ads_scraper
+    image: selenium/standalone-chrome:111.0.5563.146-chromedriver-111.0.5563.64
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    networks:
+      - my-network
+  
 volumes:
   postgres_data:
   jupyter_data:

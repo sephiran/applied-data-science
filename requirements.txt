@@ -1,5 +1,6 @@
 pandas
 selenium
+webdriver_manager
 bs4
 numpy
 matplotlib
