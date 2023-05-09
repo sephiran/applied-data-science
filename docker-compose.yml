@@ -46,7 +46,8 @@ services:
   
   selenium:
     container_name: ads_scraper
-    image: selenium/standalone-chrome:111.0.5563.146-chromedriver-111.0.5563.64
+    shm_size: '2gb'
+    image: seleniarm/standalone-chromium:111.0.5563.64
     ports:
       - "4444:4444"
       - "7900:7900"
