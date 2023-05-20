@@ -13,6 +13,7 @@ db_host = "postgres"
 db_port = "5432"
 
 table_name = 'airbnb'
+table_name_sentiment = "airbnb_sentiment"
 
 # Create a connection to the PostgreSQL database
 engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
@@ -20,6 +21,13 @@ engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port
 df = pd.read_csv('/home/jovyan/jupyter_data/data/airbnb_rental_prices_combined.csv', sep=";")
 # Save the DataFrame as a table in the PostgreSQL database
 df.to_sql(table_name, engine, if_exists='replace', index=False)
+
+# Create a connection to the PostgreSQL database
+engine = create_engine(f'postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
+# Read csv into df
+df = pd.read_csv('/home/jovyan/jupyter_data/data/airbnb_rental_prices_combined_sentiment.csv', sep=";")
+# Save the DataFrame as a table in the PostgreSQL database
+df.to_sql(table_name_sentiment, engine, if_exists='replace', index=False)
 
 def read_table_to_dataframe(db_name, db_user, db_password, db_host, db_port, table_name):
     # Establish a connection to the PostgreSQL database
@@ -32,6 +40,12 @@ def read_table_to_dataframe(db_name, db_user, db_password, db_host, db_port, tab
 
 # Call the function to read the table from the PostgreSQL database into a DataFrame
 df = read_table_to_dataframe(db_name, db_user, db_password, db_host, db_port, table_name)
+
+# Display the DataFrame
+print(df)
+
+# Call the function to read the table from the PostgreSQL database into a DataFrame
+df = read_table_to_dataframe(db_name, db_user, db_password, db_host, db_port, table_name_sentiment)
 
 # Display the DataFrame
 print(df)

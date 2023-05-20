@@ -14,3 +14,7 @@ openpyxl
 geopandas
 psycopg2-binary
 sqlalchemy
+spacy
+spacy_fastlang
+deep-translator
+textblob_de
