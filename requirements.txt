@@ -18,6 +18,6 @@ spacy
 spacy_fastlang
 deep-translator
 textblob_de
-tensorflow
 datasets
 transformers
+scikit-learn
